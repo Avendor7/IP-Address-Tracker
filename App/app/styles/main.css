@@ -1,16 +1,18 @@
 .browsehappy {
   margin: 0.2em 0;
-  background: #009688;
+  background: #FF0000;
   color: #000;
   padding: 0.2em 0;
 }
-
 body {
   padding: 0;
+  background-color: #37474F;
+  font-family: 'Ubuntu', sans-serif;
+  
 }
 
 /* Everything but the jumbotron gets side spacing for mobile first views */
-.header,
+
 .marketing,
 .footer {
   padding-left: 15px;
@@ -29,55 +31,57 @@ body {
   line-height: 40px;
   padding-bottom: 19px;
 }
+.navbar{
+    background-color: #212121;
+}
 
-/* Custom page footer */
 .footer {
-  padding-top: 19px;
-  color: #777;
-  border-top: 1px solid #e5e5e5;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 50px;
+    width: 100%;
+    color:#EEE;
+    font-size: 16px;
+    background-color: #212121;
 }
 
-.container-narrow > hr {
-  margin: 30px 0;
+.footer p {
+    margin: 15px;
 }
+
 
 /* Main marketing message and sign up button */
 .jumbotron {
   text-align: center;
   border-bottom: 1px solid #e5e5e5;
 }
-.jumbotron .btn {
-  font-size: 21px;
-  padding: 14px 24px;
+.card {
+  margin-top: 15px;
+  background-color: #212121;
+  color: #FAFAFA;
+  
 }
 
-/* Supporting marketing content */
-.marketing {
-  margin: 40px 0;
-}
-.marketing p + h4 {
-  margin-top: 28px;
+.card-pad {
+    margin-top: 60px;
 }
 
-/* Responsive: Portrait tablets and up */
-@media screen and (min-width: 768px) {
-  .container {
-    max-width: 730px;
-  }
+.fixed-card {
+    min-height: 543px;
+}
+.card .card-heading {
+    background-color: #009688;
+    color: rgba(255, 255, 255, 0.84);
+    border: 0;
+    padding: 10px 15px;
+    border-bottom: 1px solid transparent;
+}
 
-  /* Remove the padding we set earlier */
-  .header,
-  .marketing,
-  .footer {
-    padding-left: 0;
-    padding-right: 0;
-  }
-  /* Space out the masthead */
-  .header {
-    margin-bottom: 30px;
-  }
-  /* Remove the bottom border on the jumbotron for visual effect */
-  .jumbotron {
-    border-bottom: 0;
-  }
+.login-card {
+    width: 100%;
+    max-width: 400px;
+    margin: auto;
+    padding-right: 15px;
+    padding-left: 15px;
 }
