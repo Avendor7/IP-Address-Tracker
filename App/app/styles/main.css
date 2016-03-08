@@ -4,7 +4,10 @@
   color: #000;
   padding: 0.2em 0;
 }
-
+html{
+    overflow-y: scroll;
+    
+}
 body {
   padding-top: 70px; 
   background-color: #37474F;
@@ -16,6 +19,7 @@ body {
   position: absolute; 
   width:100%;
   top: 0;
+  font-size: 16px;
   
 }
 /* Make the masthead heading the same height as the navigation */
@@ -45,19 +49,20 @@ body {
     margin: 15px;
 }
 
-.jumbotron {
-  text-align: center;
-  border-bottom: 1px solid #e5e5e5;
-}
+
 .card {
   margin-top: 15px;
   background-color: #212121;
   color: #FAFAFA;
+  font-size: 14px;
+  padding: 0;
   
 }
 .card-pad {
     margin-top: 60px;
+    
 }
+
 
 .fixed-card {
     min-height: 543px;
