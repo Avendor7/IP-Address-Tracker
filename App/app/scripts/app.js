@@ -29,6 +29,16 @@ angular
         controller: 'ResumeCtrl',
         controllerAs: 'resume'
       })
+      .when('/login', {
+        templateUrl: 'views/login.html',
+        controller: 'LoginCtrl',
+        controllerAs: 'login'
+      })
+      .when('/logoff', {
+        templateUrl: 'views/logoff.html',
+        controller: 'LogoffCtrl',
+        controllerAs: 'logoff'
+      })
       .otherwise({
         redirectTo: '/'
       });

@@ -82,6 +82,22 @@ body {
     padding-right: 15px;
     padding-left: 15px;
 }
+
+.card .card-white{
+    background-color: #EEE;
+    color:#000;
+}
+
+img.login-logo {
+    padding: 35px;
+    height: 200px;
+    width: 400px;
+}
 .margin-bottom-15 {
     margin-bottom: 100px;
+}
+
+.btn {
+    background-color: #009688;
+    color: white;
 }
