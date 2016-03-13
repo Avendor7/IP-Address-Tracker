@@ -8,10 +8,17 @@
  * Controller of the appApp
  */
 angular.module('appApp')
-  .controller('LoginCtrl', function () {
-    this.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
-  });
+.controller('LoginCtrl', function($scope, AuthService, $ionicPopup, $state) {
+  $scope.user = {
+    email: '',
+    password: ''
+  };
+ 
+  $scope.login = function() {
+    AuthService.login($scope.user).then(function(msg) {
+      $state.go('inside');
+    }, function(errMsg) {
+      //display error message on failed login
+    });
+  };
+});

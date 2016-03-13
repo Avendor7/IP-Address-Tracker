@@ -39,6 +39,11 @@ angular
         controller: 'LogoffCtrl',
         controllerAs: 'logoff'
       })
+      .when('/post', {
+        templateUrl: 'views/post.html',
+        controller: 'PostCtrl',
+        controllerAs: 'post'
+      })
       .otherwise({
         redirectTo: '/'
       });

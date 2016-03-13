@@ -15,19 +15,21 @@
                                     </div>
                                 </div>
                                 <div class="card-body">
-                                    <!--TODO check for form validation-->
-                                    <div class="form-group">
-                                        <span class="label label-default control-label">Email</span>
-                                        <input type="text" class="form-control" placeholder="Username">
-                                    </div>
-                                    <div class="form-group">
-                                        <span class="label label-default control-label">Password</span>
-                                        <input type="text" class="form-control" placeholder="Password">
-                                    </div>
+                                    <form ng-submit="submitLoginForm()">
+                                        <!--TODO check for form validation-->
+                                        <div class="form-group">
+                                            <span class="label label-default control-label">Email</span>
+                                            <input type="text" class="form-control" placeholder="Username" ng-model="user.email">
+                                        </div>
+                                        <div class="form-group">
+                                            <span class="label label-default control-label">Password</span>
+                                            <input type="password" class="form-control" placeholder="Password" ng-model="user.password">
+                                        </div>
+                                    </form>
                                 </div>
                             </div>
                             <div>
-                                <input type="submit" value="Log in" class="btn" />
+                                <button type="submit" value="Log in" class="btn">Login</button>
                             </div>
                         </div>
                     </section>
