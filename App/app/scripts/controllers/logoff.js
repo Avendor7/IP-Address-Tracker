@@ -8,10 +8,6 @@
  * Controller of the appApp
  */
 angular.module('appApp')
-  .controller('LogoffCtrl', function () {
-    this.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
-  });
+  .controller('LogoffCtrl', ['$scope', '$http', function($scope, $http) {
+   
+  }]);

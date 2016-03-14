@@ -17,7 +17,7 @@ angular
     'ngSanitize',
     'ngTouch'
   ])
-  .config(function ($routeProvider) {
+  .config(function ($routeProvider, AccessLevels) {
     $routeProvider
       .when('/', {
         templateUrl: 'views/blog.html',
@@ -27,7 +27,8 @@ angular
       .when('/resume', {
         templateUrl: 'views/resume.html',
         controller: 'ResumeCtrl',
-        controllerAs: 'resume'
+        controllerAs: 'resume',
+        access: AccessLevels.user
       })
       .when('/login', {
         templateUrl: 'views/login.html',

@@ -8,17 +8,18 @@
  * Controller of the appApp
  */
 angular.module('appApp')
-.controller('LoginCtrl', function($scope, AuthService, $ionicPopup, $state) {
-  $scope.user = {
-    email: '',
-    password: ''
-  };
- 
-  $scope.login = function() {
-    AuthService.login($scope.user).then(function(msg) {
-      $state.go('inside');
-    }, function(errMsg) {
-      //display error message on failed login
-    });
-  };
+    .controller('LoginCtrl', function($scope, $location, Auth) {
+    $scope.errors = [];
+
+    $scope.login = function(login) {
+      $scope.errors = [];
+      Auth.login($scope.user).success(function(result) {
+        //$location.path('/');
+        alert("login successful");
+      }).error(function(err) {
+        $scope.errors.push(err);
+        alert("login failed");
+      });
+    }
 });
+
