@@ -18,12 +18,15 @@ angular.module('appApp')
       }
     },
     isAuthenticated: function() {
+        
       return LocalService.get('auth_token');
     },
     login: function(credentials) {
+      
       var login = $http.post('http://127.0.0.1:1337/auth/login', credentials);
       login.success(function(result) {
         LocalService.set('auth_token', JSON.stringify(result));
+        alert(LocalService.get('auth_token'));
       });
       return login;
     },
@@ -33,7 +36,7 @@ angular.module('appApp')
     },
     register: function(formData) {
       LocalService.unset('auth_token');
-      var register = $http.post('http://127.0.0.1:1337/auth/login', formData);
+      var register = $http.post('http://127.0.0.1:1337/auth/register', formData);
       register.success(function(result) {
         LocalService.set('auth_token', JSON.stringify(result));
       });

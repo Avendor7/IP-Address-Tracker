@@ -8,7 +8,7 @@
  * Factory in the appApp.
  */
 angular.module('appApp')
-    .factory('AuthInterceptor', function ($q, $injector) {
+    .factory('AuthInterceptor', function ($q, $injector, LocalService) {
         return {
             request: function (config) {
                 var LocalService = $injector.get('LocalService');

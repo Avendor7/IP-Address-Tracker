@@ -43,7 +43,8 @@ angular
       .when('/post', {
         templateUrl: 'views/post.html',
         controller: 'PostCtrl',
-        controllerAs: 'post'
+        controllerAs: 'post',
+        
       })
       .otherwise({
         redirectTo: '/'

@@ -9,15 +9,13 @@
  */
 angular.module('appApp')
     .controller('LoginCtrl', function($scope, $location, Auth) {
-    $scope.errors = [];
 
-    $scope.login = function(login) {
-      $scope.errors = [];
+    $scope.loginNow = function() {
       Auth.login($scope.user).success(function(result) {
         //$location.path('/');
         alert("login successful");
       }).error(function(err) {
-        $scope.errors.push(err);
+        //$scope.errors.push(err);
         alert("login failed");
       });
     }
