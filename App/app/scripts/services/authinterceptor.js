@@ -8,7 +8,7 @@
  * Factory in the appApp.
  */
 angular.module('appApp')
-    .factory('AuthInterceptor', function ($q, $injector, LocalService) {
+    .factory('AuthInterceptor', function ($q, $injector, LocalService, $location) {
         return {
             request: function (config) {
                 var LocalService = $injector.get('LocalService');
@@ -24,7 +24,7 @@ angular.module('appApp')
             responseError: function (response) {
                 if (response.status === 401 || response.status === 403) {
                     LocalService.unset('auth_token');
-                    $injector.get('$state').go('anon.login');
+                    $location.path('/login');
                 }
                 return $q.reject(response);
             }

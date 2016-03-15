@@ -26,12 +26,12 @@ angular.module('appApp')
       var login = $http.post('http://127.0.0.1:1337/auth/login', credentials);
       login.success(function(result) {
         LocalService.set('auth_token', JSON.stringify(result));
-        alert(LocalService.get('auth_token'));
       });
       return login;
     },
     logout: function() {
       // The backend doesn't care about logouts, delete the token and you're good to go.
+      alert("logged out");
       LocalService.unset('auth_token');
     },
     register: function(formData) {

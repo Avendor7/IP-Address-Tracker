@@ -8,6 +8,7 @@
  * Controller of the appApp
  */
 angular.module('appApp')
-  .controller('LogoffCtrl', ['$scope', '$http', function($scope, $http, LocalService) {
+  .controller('LogoffCtrl', ['$scope', '$http', function($scope, $http, Auth) {
    
+      Auth.logout();
   }]);
