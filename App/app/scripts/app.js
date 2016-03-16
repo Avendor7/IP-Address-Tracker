@@ -10,44 +10,71 @@
  */
 angular
     .module('appApp', [
-        'ngAnimate',
-        'ngCookies',
-        'ngResource',
-        'ngRoute',
-        'ngSanitize',
-        'ngTouch'
+        'ui.router'
     ])
-    .config(function ($routeProvider, AccessLevels) {
-        $routeProvider
-            .when('/', {
+    .config(function ($stateProvider, $urlRouterProvider, AccessLevels) {
+        $stateProvider
+            .state('anon', {
+                abstract: true,
+                template: '<ui-view/>',
+                data: {
+                    access: AccessLevels.anon
+                }
+            })
+            .state('anon.blog', {
                 templateUrl: 'views/blog.html',
                 controller: 'BlogCtrl',
                 controllerAs: 'blog',
-
+                url: '/'
             })
-            .when('/resume', {
+            .state('anon.resume', {
                 templateUrl: 'views/resume.html',
                 controller: 'ResumeCtrl',
                 controllerAs: 'resume',
-                
+                url: '/resume'
+
             })
-            .when('/login', {
+            .state('anon.login', {
                 templateUrl: 'views/login.html',
                 controller: 'LoginCtrl',
-                controllerAs: 'login'
+                controllerAs: 'login',
+                url: '/login'
             })
-            .when('/logoff', {
+            .state('anon.logoff', {
                 templateUrl: 'views/logoff.html',
                 controller: 'LogoffCtrl',
-                controllerAs: 'logoff'
+                controllerAs: 'logoff',
+                url: '/logoff'
+            });
+           // .state('anon.post', {
+         //       templateUrl: 'views/post.html',
+       //         controller: 'PostCtrl',
+        //        url: '/post'
+      //      });
+            
+        $stateProvider
+            .state('user', {
+                abstract: true,
+                template: '<ui-view/>',
+                data: {
+                    access: AccessLevels.user
+                }
             })
-            .when('/post', {
+            .state('user.post', {
                 templateUrl: 'views/post.html',
                 controller: 'PostCtrl',
-                controllerAs: 'post'
-            })
-            .otherwise({
-                redirectTo: '/'
-            })
-        //.run goes here with the rootscope code
+                url: '/post'
+            });
+            
+        $urlRouterProvider.otherwise('/');
+
+    })
+    .run(function ($rootScope, $state, Auth) {
+        $rootScope.$on('$stateChangeStart', function (event, toState, toParams, fromState, fromParams) {
+            if (!Auth.authorize(toState.data.access)) {
+                event.preventDefault();
+
+                $state.go('anon.login');
+            }
+        });
     });

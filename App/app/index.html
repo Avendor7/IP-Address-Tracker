@@ -44,12 +44,12 @@
                 <div class="collapse navbar-collapse" id="js-navbar-collapse">
 
                     <ul class="nav navbar-nav" active-link-nav>
-                        <li><a href="#/">Blog</a></li>
-                        <li><a ng-href="#/resume">Resume</a></li>
+                        <li><a ui-sref="anon.blog">Blog</a></li>
+                        <li><a ui-sref="anon.resume">Resume</a></li>
                     </ul>
                      <ul class="nav navbar-nav navbar-right">
-                        <li><a ng-href="#/login">Login</a></li>
-                        <li><a ng-href="#/logoff">Logoff</a></li>
+                        <li><a ui-sref="anon.login">Login</a></li>
+                        <li><a ui-sref="anon.logoff">Logoff</a></li>
                     </ul>
                 </div>
             </div>
@@ -57,7 +57,7 @@
     </div>
 
     <div class="container">
-        <div ng-view=""></div>
+        <div ui-view=""></div>
     </div>
 
     <div class="footer">
@@ -98,6 +98,7 @@
     <script src="bower_components/bootstrap-sass/assets/javascripts/bootstrap.js"></script>
     <script src="bower_components/bootstrap-material-design/dist/js/material.js"></script>
     <script src="bower_components/bootstrap-material-design/dist/js/ripples.js"></script>
+    <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
 

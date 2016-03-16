@@ -8,11 +8,11 @@
  * Controller of the appApp
  */
 angular.module('appApp')
-    .controller('LoginCtrl', function($scope, $location, Auth) {
+    .controller('LoginCtrl', function($scope, $state, Auth) {
 
     $scope.loginNow = function() {
       Auth.login($scope.user).success(function(result) {
-        //$location.path('/');
+        //$state.go('/');
         alert("login successful");
       }).error(function(err) {
         //$scope.errors.push(err);

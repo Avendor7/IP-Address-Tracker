@@ -10,5 +10,4 @@
 angular.module('appApp')
   .controller('LogoffCtrl', ['$scope', '$http', function($scope, $http, Auth) {
    
-      Auth.logout();
   }]);

@@ -8,14 +8,10 @@
  * Controller of the appApp
  */
 angular.module('appApp')
-  .controller('ResumeCtrl', function ($scope,$location) {
-    this.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
+  .controller('ResumeCtrl', function ($scope,$state) {
+    
     $scope.isActive = function (viewLocation) {
-     var active = (viewLocation === $location.path());
+     var active = (viewLocation === $state.go());
      return active;
     };
   });
