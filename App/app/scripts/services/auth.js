@@ -8,7 +8,7 @@
  * Factory in the appApp.
  */
 angular.module('appApp')
-  .factory('Auth', function ($http, LocalService, AccessLevels) {
+  .factory('Auth', function ($http, LocalService, AccessLevels, API_ENDPOINT) {
     return {
     authorize: function(access) {
       if (access === AccessLevels.user) {
@@ -23,7 +23,7 @@ angular.module('appApp')
     },
     login: function(credentials) {
       
-      var login = $http.post('http://127.0.0.1:1337/auth/login', credentials);
+      var login = $http.post(API_ENDPOINT.url + 'auth/login', credentials);
       login.success(function(result) {
         LocalService.set('auth_token', JSON.stringify(result));
       });
@@ -31,12 +31,11 @@ angular.module('appApp')
     },
     logout: function() {
       // The backend doesn't care about logouts, delete the token and you're good to go.
-      alert("logged out");
       LocalService.unset('auth_token');
     },
     register: function(formData) {
       LocalService.unset('auth_token');
-      var register = $http.post('http://127.0.0.1:1337/auth/register', formData);
+      var register = $http.post(API_ENDPOINT.url + 'auth/register', formData);
       register.success(function(result) {
         LocalService.set('auth_token', JSON.stringify(result));
       });

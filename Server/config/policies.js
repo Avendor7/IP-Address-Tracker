@@ -30,7 +30,8 @@ module.exports.policies = {
    
    PostController:{
        '*': 'hasJsonWebToken',
-       find: true
+       find: true,
+       findOne: true
    }
 
 

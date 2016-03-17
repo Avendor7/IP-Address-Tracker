@@ -8,6 +8,6 @@
  * Controller of the appApp
  */
 angular.module('appApp')
-  .controller('BlogCtrl', function () {
+  .controller('BlogCtrl', function (Auth) {
     
   });
