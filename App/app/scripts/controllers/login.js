@@ -15,7 +15,6 @@ angular.module('appApp')
         $state.go('anon.blog');
       }).error(function(err) {
         //$scope.errors.push(err);
-        alert("login failed");
       });
     }
 });
