@@ -1,8 +1,8 @@
 /**
- * PostController
+ * IpAddress.js
  *
- * @description :: Server-side logic for managing posts
- * @help        :: See http://sailsjs.org/#!/documentation/concepts/Controllers
+ * @description :: TODO: You might write a short summary of how this model works and what it represents here.
+ * @docs        :: http://sailsjs.org/documentation/concepts/models-and-orm/models
  */
 
 module.exports = {
@@ -16,4 +16,3 @@ module.exports = {
         return res.ok("You have a JSON web token");
     }
 };
-
