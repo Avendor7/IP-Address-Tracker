@@ -28,7 +28,7 @@ module.exports.policies = {
     //global
    '*': true,
    
-   PostController:{
+   IpAddressController:{
        '*': 'hasJsonWebToken',
        find: true,
        findOne: true

@@ -9,20 +9,21 @@ module.exports = {
     schema: true,
     autoPK: true,
     attributes: {
-        
         hostname: {
             type: 'string',
-            required: true
+            required: true,
+            unique: true
+        },
+        ipv4: {
+            type: 'string',
+            required: true,
+            unique: true
         },
         VM: {
             type: 'boolean',
             defaultsTo: false
         },
-        ipv4: {
-            type: 'string',
-            required: true
-        },
-        ipv6: {
+        operatingSystem: {
             type: 'string',
             required: true
         },
