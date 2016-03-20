@@ -1,1 +1,30 @@
 <h1>This is the home view.</h1>
+<p style="color:white;">{{ipaddressData}}</p>
+<div class="container">
+  <h2>Table</h2>
+  <p>The .table-responsive class creates a responsive table which will scroll horizontally on small devices (under 768px). When viewing on anything larger than 768px wide, there is no difference:</p>                                                                                      
+  <div class="table-responsive">          
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Hostname</th>
+        <th>IP Address</th>
+        <th>VM</th>
+        <th>OS</th>
+        <th>Description</th>
+        <th>ID</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr ng-repeat="x in ipaddressData">
+        <td>{{ x.hostname }}</td>
+        <td>{{ x.ipv4 }}</td>
+        <td>{{ x.VM }}</td>
+        <td>{{ x.OS }}</td>
+        <td>{{ x.description }}</td>
+        <td>{{ x.id }}</td>
+      </tr>
+    </tbody>
+  </table>
+  </div>
+</div>
