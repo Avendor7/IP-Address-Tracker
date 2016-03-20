@@ -8,7 +8,7 @@
  * Controller of the appApp
  */
 angular.module('appApp')
-    .controller('HomeCtrl', function ($http, $scope, API_ENDPOINT, AuthInterceptor, $state) {
+    .controller('HomeCtrl', function ($http, $scope, API_ENDPOINT, $state) {
         //get the data
         
         
@@ -35,7 +35,6 @@ angular.module('appApp')
             //     'os': $scope.os,
             //     'description': $scope.description,
             //     };
-            console.log(AuthInterceptor);
             $http({
                 method: 'POST',
                 url: 'http://localhost:1337/ipAddress',
@@ -45,7 +44,6 @@ angular.module('appApp')
                 // when the response is available
                 $scope.ipaddressData = response.data;
                 console.log(response.data);
-                $state.go('user.home');
             }, function errorCallback(response) {
                 // called asynchronously if an error occurs
                 // or server returns response with an error status.
@@ -69,9 +67,8 @@ angular.module('appApp')
 
             $http({
                 method: 'PUT',
-                url: 'http://localhost:1337/ipaddress',
+                url: 'http://localhost:1337/ipAddress',
                 data: formData,
-                params: { id: $scope.id }
             }).then(function successCallback(response) {
                 // this callback will be called asynchronously
                 // when the response is available
