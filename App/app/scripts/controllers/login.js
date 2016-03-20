@@ -12,10 +12,10 @@ angular.module('appApp')
 
     $scope.loginNow = function() {
       Auth.login($scope.user).success(function(result) {
-        $state.go('anon.blog');
+        $state.go('user.home');
       }).error(function(err) {
         //$scope.errors.push(err);
       });
-    }
+    };
 });
 

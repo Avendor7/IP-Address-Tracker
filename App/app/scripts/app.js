@@ -21,19 +21,6 @@ angular
                     access: AccessLevels.anon
                 }
             })
-            .state('anon.blog', {
-                templateUrl: 'views/blog.html',
-                controller: 'BlogCtrl',
-                controllerAs: 'blog',
-                url: '/'
-            })
-            .state('anon.resume', {
-                templateUrl: 'views/resume.html',
-                controller: 'ResumeCtrl',
-                controllerAs: 'resume',
-                url: '/resume'
-
-            })
             .state('anon.login', {
                 templateUrl: 'views/login.html',
                 controller: 'LoginCtrl',
@@ -46,11 +33,6 @@ angular
                 controllerAs: 'logoff',
                 url: '/logoff'
             });
-           // .state('anon.post', {
-         //       templateUrl: 'views/post.html',
-       //         controller: 'PostCtrl',
-        //        url: '/post'
-      //      });
             
         $stateProvider
             .state('user', {
@@ -61,9 +43,9 @@ angular
                 }
             })
             .state('user.post', {
-                templateUrl: 'views/post.html',
-                controller: 'PostCtrl',
-                url: '/post'
+                templateUrl: 'views/home.html',
+                controller: 'HomeCtrl',
+                url: '/'
             });
             
         $urlRouterProvider.otherwise('/');
@@ -73,7 +55,6 @@ angular
         $rootScope.$on('$stateChangeStart', function (event, toState, toParams, fromState, fromParams) {
             if (!Auth.authorize(toState.data.access)) {
                 event.preventDefault();
-
                 $state.go('anon.login');
             }
         });

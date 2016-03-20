@@ -2,12 +2,12 @@
 
 /**
  * @ngdoc function
- * @name appApp.controller:MainCtrl
+ * @name appApp.controller:PostCtrl
  * @description
- * # MainCtrl
+ * # PostCtrl
  * Controller of the appApp
  */
 angular.module('appApp')
-  .controller('BlogCtrl', function (Auth) {
+  .controller('HomeCtrl', function () {
     
   });

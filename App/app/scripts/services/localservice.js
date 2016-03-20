@@ -19,5 +19,5 @@ angular.module('appApp')
       unset: function(key) {
         return localStorage.removeItem(key);
       }
-    }
+    };
   });

@@ -11,7 +11,7 @@ angular.module('appApp')
   .controller('LogoffCtrl',function($scope, $state, Auth) {
    
    Auth.logout();
-   $state.go('anon.blog');
+   $state.go('anon.login');
       
      
   });
