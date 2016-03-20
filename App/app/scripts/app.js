@@ -12,7 +12,7 @@ angular
     .module('appApp', [
         'ui.router'
     ])
-    .config(function ($stateProvider, $urlRouterProvider, AccessLevels) {
+    .config(function ($stateProvider, $urlRouterProvider, AccessLevels, $httpProvider) {
         $stateProvider
             .state('anon', {
                 abstract: true,
@@ -42,13 +42,14 @@ angular
                     access: AccessLevels.user
                 }
             })
-            .state('user.post', {
+            .state('user.home', {
                 templateUrl: 'views/home.html',
                 controller: 'HomeCtrl',
                 url: '/'
             });
             
         $urlRouterProvider.otherwise('/');
+        $httpProvider.interceptors.push('AuthInterceptor');
 
     })
     .run(function ($rootScope, $state, Auth) {
