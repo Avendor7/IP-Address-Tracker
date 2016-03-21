@@ -20,7 +20,8 @@
                     <td>{{ x.OS }}</td>
                     <td>{{ x.description }}</td>
                     <td>
-                        <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#editAddressModal">Edit</button>
+                        <button type="button" class="btn btn-info btn-lg" data-id="{{ x.id }}" data-toggle="modal" data-target="#editAddressModal" ng-click="">Edit</button>
+                        <button type="button" class="btn btn-info btn-lg" ng-click="deleteAddress(x.id)">Delete</button>
                     </td>
                 </tr>
             </tbody>
@@ -29,50 +30,6 @@
     <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#newAddressModal">New IP Address</button>
 </div>
 
-<!-- New Address Modal -->
-<div id="newAddressModal" class="modal fade" role="dialog">
-    <div class="modal-dialog">
-
-        <!-- Modal content-->
-        <div class="modal-content">
-            <div class="modal-header">
-                <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal">&times;</button>
-                <h4 class="modal-title">New IP Address</h4>
-            </div>
-            </div>
-            <div class="modal-body">
-               <form>
-                    <div class="form-group">
-                        <span class="label label-default control-label">Hostname</span>
-                        <input type="text" class="form-control" placeholder="Hostname" ng-model="address.hostname">
-                    </div>
-                    <div class="form-group">
-                        <span class="label label-default control-label">IP Address</span>
-                        <input type="text" class="form-control" placeholder="IP Address" ng-model="address.ipv4">
-                    </div>
-                    <div class="form-group">
-                        <span class="label label-default control-label">VM</span>
-                        <input type="checkbox" class="form-control" placeholder="VM" ng-model="address.VM">
-                    </div>
-                    <div class="form-group">
-                        <span class="label label-default control-label">Operating System</span>
-                        <input type="text" class="form-control" placeholder="Operating System" ng-model="address.OS">
-                    </div>
-                    <div class="form-group">
-                        <span class="label label-default control-label">Description</span>
-                        <input type="text" class="form-control" placeholder="Description" ng-model="address.description">
-                    </div>
-                </form>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary" ng-click="newAddress()" data-dismiss="modal">Submit</button>
-            </div>
-        </div>
-
-    </div>
-</div>
 
 <!-- Edit Address Modal -->
 <div id="editAddressModal" class="modal fade" role="dialog">
@@ -114,6 +71,50 @@
             <div class="modal-footer">
                 <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
                 <button type="button" class="btn btn-primary" ng-click="updateAddress()" data-dismiss="modal">Submit</button>
+            </div>
+        </div>
+
+    </div>
+</div>
+<!-- New Address Modal -->
+<div id="newAddressModal" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">New IP Address</h4>
+            </div>
+            </div>
+            <div class="modal-body">
+               <form>
+                    <div class="form-group">
+                        <span class="label label-default control-label">Hostname</span>
+                        <input type="text" class="form-control" placeholder="Hostname" ng-model="address.hostname">
+                    </div>
+                    <div class="form-group">
+                        <span class="label label-default control-label">IP Address</span>
+                        <input type="text" class="form-control" placeholder="IP Address" ng-model="address.ipv4">
+                    </div>
+                    <div class="form-group">
+                        <span class="label label-default control-label">VM</span>
+                        <input type="checkbox" class="form-control" placeholder="VM" ng-model="address.VM">
+                    </div>
+                    <div class="form-group">
+                        <span class="label label-default control-label">Operating System</span>
+                        <input type="text" class="form-control" placeholder="Operating System" ng-model="address.OS">
+                    </div>
+                    <div class="form-group">
+                        <span class="label label-default control-label">Description</span>
+                        <input type="text" class="form-control" placeholder="Description" ng-model="address.description">
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary" ng-click="newAddress()" data-dismiss="modal">Submit</button>
             </div>
         </div>
 

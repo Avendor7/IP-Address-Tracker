@@ -10,19 +10,22 @@
 angular.module('appApp')
     .controller('HomeCtrl', function ($http, $scope, API_ENDPOINT, $state) {
         //get the data
-        $http({
-            method: 'GET',
-            url: 'http://localhost:1337/ipaddress'
-        }).then(function successCallback(response) {
-            // this callback will be called asynchronously
-            // when the response is available
-            $scope.ipaddressData = response.data;
-        }, function errorCallback(response) {
-            // called asynchronously if an error occurs
-            // or server returns response with an error status.
-            $scope.ipaddressData = "failed";
-        });
-        
+        function getData() {
+            $http({
+                method: 'GET',
+                url: 'http://localhost:1337/ipaddress'
+            }).then(function successCallback(response) {
+                // this callback will be called asynchronously
+                // when the response is available
+                $scope.ipaddressData = response.data;
+            }, function errorCallback(response) {
+                // called asynchronously if an error occurs
+                // or server returns response with an error status.
+                $scope.ipaddressData = "failed";
+            });
+        }
+
+        getData();
         //post new data
         $scope.newAddress = function () {
 
@@ -35,6 +38,7 @@ angular.module('appApp')
                 // when the response is available
                 $scope.ipaddressData = response.data;
                 console.log(response.data);
+                getData();
             }, function errorCallback(response) {
                 // called asynchronously if an error occurs
                 // or server returns response with an error status.
@@ -66,17 +70,18 @@ angular.module('appApp')
         };
         
         //delete data from ID
-        $scope.deleteAddress = function () {
+        $scope.deleteAddress = function (id) {
 
             $http({
-                method: 'PUT',
-                url: 'http://localhost:1337/ipAddress',
+                method: 'DELETE',
+                url: 'http://localhost:1337/ipAddress/' + id,
                 data: $scope.address
             }).then(function successCallback(response) {
                 // this callback will be called asynchronously
                 // when the response is available
                 $scope.ipaddressData = response.data;
                 console.log(response.data);
+                getData();
             }, function errorCallback(response) {
                 // called asynchronously if an error occurs
                 // or server returns response with an error status.
