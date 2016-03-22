@@ -59,7 +59,6 @@ angular.module('appApp')
                 // this callback will be called asynchronously
                 // when the response is available
                 $scope.ipaddressData = response.data;
-                console.log(response.data);
             }, function errorCallback(response) {
                 // called asynchronously if an error occurs
                 // or server returns response with an error status.
@@ -80,7 +79,6 @@ angular.module('appApp')
                 // this callback will be called asynchronously
                 // when the response is available
                 $scope.ipaddressData = response.data;
-                console.log(response.data);
                 getData();
             }, function errorCallback(response) {
                 // called asynchronously if an error occurs
