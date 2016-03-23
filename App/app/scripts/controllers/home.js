@@ -120,7 +120,7 @@ angular.module('appApp')
 
         };
     });
-angular.module('appAppo').controller('ModalInstanceCtrl', function ($scope, $uibModalInstance, items) {
+angular.module('appApp').controller('ModalInstanceCtrl', function ($scope, $uibModalInstance, items) {
 
   $scope.items = items;
   $scope.selected = {
