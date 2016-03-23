@@ -1,6 +1,6 @@
 'use strict';
 
-describe('Service: myConstants', function () {
+describe('Service: Constants', function () {
 
   // load the service's module
   beforeEach(module('appApp'));

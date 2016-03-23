@@ -10,7 +10,8 @@
  */
 angular
     .module('appApp', [
-        'ui.router'
+        'ui.router',
+         'ui.bootstrap'
     ])
     .config(function ($stateProvider, $urlRouterProvider, AccessLevels, $httpProvider) {
         $stateProvider
