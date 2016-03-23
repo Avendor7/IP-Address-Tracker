@@ -1,0 +1,100 @@
+//colors
+$red: #ff0000;
+$black: #000;
+$color_limed_spruce_approx: #37474f;
+$color_log_cabin_approx: #212121;
+$color_gallery_approx: #eee;
+$alabaster: #fafafa;
+$color_gossamer_approx: #009688;
+$white_84: rgba(255, 255, 255, 0.84);
+$white: white;
+
+//fonts
+$font_0: Ubuntu;
+$font_1: sans-serif;
+
+.browsehappy {
+	margin: 0.2em 0;
+	background: $red;
+	color: $black;
+	padding: 0.2em 0;
+}
+html {
+	overflow-y: scroll;
+}
+body {
+	padding-top: 70px;
+	background-color: $color_limed_spruce_approx;
+	font-family: $font_0, $font_1;
+}
+.header {
+	position: absolute;
+	width: 100%;
+	top: 0;
+	font-size: 16px;
+	h3 {
+		margin-top: 0;
+		margin-bottom: 0;
+		line-height: 40px;
+		padding-bottom: 19px;
+	}
+}
+.navbar {
+	background-color: $color_log_cabin_approx;
+}
+.footer {
+	left: 0;
+	bottom: 0;
+	height: 50px;
+	width: 100%;
+	color: $color_gallery_approx;
+	font-size: 16px;
+	background-color: $color_log_cabin_approx;
+	position: fixed;
+	p {
+		margin: 15px;
+	}
+}
+.card {
+	margin-top: 15px;
+	background-color: $color_log_cabin_approx;
+	color: $alabaster;
+	font-size: 14px;
+	padding: 0;
+	.card-heading {
+		background-color: $color_gossamer_approx;
+		color: $white_84;
+		border: 0;
+		padding: 10px 15px;
+		border-bottom: 1px solid transparent;
+	}
+	.card-white {
+		background-color: $color_gallery_approx;
+		color: $black;
+	}
+}
+.card-pad {
+	margin-top: 60px;
+}
+.fixed-card {
+	min-height: 543px;
+}
+.login-card {
+	width: 100%;
+	max-width: 400px;
+	margin: auto;
+	padding-right: 15px;
+	padding-left: 15px;
+}
+.margin-bottom-15 {
+	margin-bottom: 100px;
+}
+.btn {
+	background-color: $color_gossamer_approx;
+	color: $white;
+}
+img.login-logo {
+	padding: 35px;
+	height: 200px;
+	width: 400px;
+}
