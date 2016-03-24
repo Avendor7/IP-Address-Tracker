@@ -5,7 +5,7 @@ $color_limed_spruce_approx: #37474f;
 $color_log_cabin_approx: #212121;
 $color_gallery_approx: #eee;
 $alabaster: #fafafa;
-$color_gossamer_approx: #009688;
+$green: #009688;
 $white_84: rgba(255, 255, 255, 0.84);
 $white: white;
 
@@ -62,7 +62,7 @@ body {
 	font-size: 14px;
 	padding: 0;
 	.card-heading {
-		background-color: $color_gossamer_approx;
+		background-color: $green;
 		color: $white_84;
 		border: 0;
 		padding: 10px 15px;
@@ -90,7 +90,7 @@ body {
 	margin-bottom: 100px;
 }
 .btn {
-	background-color: $color_gossamer_approx;
+	background-color: $green;
 	color: $white;
 }
 img.login-logo {

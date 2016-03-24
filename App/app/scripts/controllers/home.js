@@ -9,36 +9,26 @@
  */
 angular.module('appApp')
     .controller('HomeCtrl', function ($http, $scope, API_ENDPOINT, $state, $uibModal, $log) {
-        $scope.items = ['item1', 'item2', 'item3'];
-
         $scope.animationsEnabled = true;
 
-        $scope.open = function (size) {
-
+        $scope.open = function () {
+            
             var modalInstance = $uibModal.open({
                 animation: $scope.animationsEnabled,
-                templateUrl: 'myModalContent.html',
-                controller: 'ModalInstanceCtrl',
-                size: size,
+                templateUrl: 'editModal',
+                controller: 'EditModalInstanceCtrl',
                 resolve: {
-                    items: function () {
-                        return $scope.items;
-                    }
+                   // people: function () { return ipaddressData.hostname }
                 }
             });
-
-            modalInstance.result.then(function (selectedItem) {
-                $scope.selected = selectedItem;
+            modalInstance.result.then(function () {
+                //save button
+                $scope.editAddress();
             }, function () {
+                //cancel button
                 $log.info('Modal dismissed at: ' + new Date());
             });
         };
-
-        $scope.toggleAnimation = function () {
-            $scope.animationsEnabled = !$scope.animationsEnabled;
-        };
-
-        
         
         //get the data
         function getData() {
@@ -49,10 +39,12 @@ angular.module('appApp')
                 // this callback will be called asynchronously
                 // when the response is available
                 $scope.ipaddressData = response.data;
+                return $scope.ipaddressData;
             }, function errorCallback(response) {
                 // called asynchronously if an error occurs
                 // or server returns response with an error status.
                 $scope.ipaddressData = "failed";
+                return "failed";
             });
         }
 
@@ -120,7 +112,7 @@ angular.module('appApp')
 
         };
     });
-angular.module('appApp').controller('ModalInstanceCtrl', function ($scope, $uibModalInstance, items) {
+angular.module('appApp').controller('EditModalInstanceCtrl', function ($scope, $uibModalInstance, items) {
 
   $scope.items = items;
   $scope.selected = {
