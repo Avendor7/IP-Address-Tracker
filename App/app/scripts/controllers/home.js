@@ -112,15 +112,13 @@ angular.module('appApp')
 
         };
     });
-angular.module('appApp').controller('EditModalInstanceCtrl', function ($scope, $uibModalInstance, items) {
+angular.module('appApp').controller('EditModalInstanceCtrl', function ($scope, $uibModalInstance, $state) {
 
-  $scope.items = items;
-  $scope.selected = {
-    item: $scope.items[0]
-  };
+ 
 
   $scope.ok = function () {
-    $uibModalInstance.close($scope.selected.item);
+    $uibModalInstance.close();
+    $state.go($state.current, {}, {reload: true});
   };
 
   $scope.cancel = function () {
