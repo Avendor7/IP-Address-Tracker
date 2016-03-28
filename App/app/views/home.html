@@ -28,6 +28,7 @@
         </table>
     </div>
     <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#newAddressModal">New IP Address</button>
+    <button type="button" class="btn btn-default" ng-click="openNew()">New Address</button>
 </div>
 
 
@@ -120,9 +121,47 @@
 
     </div>
 </div>
+
 <script type="text/ng-template" id="editModal">
     <div class="modal-header">
         <h3 class="modal-title">Edit IP Address</h3>
+    </div>
+    <div class="modal-body">
+        <form>
+            <div class="form-group">
+                <span class="label label-default control-label">Hostname</span>
+                <input type="text" class="form-control" placeholder="{{ ipaddressData.hostname }}" ng-model="address.hostname">
+            </div>
+            <div class="form-group">
+                <span class="label label-default control-label">IP Address</span>
+                <input type="text" class="form-control" placeholder="{{ ipaddressData.ipv4 }}" ng-model="address.ipv4">
+            </div>
+            <div class="form-group">
+                <span class="label label-default control-label">VM</span>
+                <input type="checkbox" class="form-control" placeholder="{{ ipaddressData.VM }}" ng-model="address.VM">
+            </div>
+            <div class="form-group">
+                <span class="label label-default control-label">Operating System</span>
+                <input type="text" class="form-control" placeholder="{{ ipaddressData.OS }}" ng-model="address.OS">
+            </div>
+            <div class="form-group">
+                <span class="label label-default control-label">Description</span>
+                <input type="text" class="form-control" placeholder="{{ ipaddressData.description }}" ng-model="address.description">
+            </div>
+            <div class="form-group">
+                <input type="hidden" ng-model="address.id">
+            </div>
+        </form>
+    </div>
+    </div>
+    <div class="modal-footer">
+        <button class="btn btn-primary" type="button" ng-click="ok()">OK</button>
+        <button class="btn btn-warning" type="button" ng-click="cancel()">Cancel</button>
+    </div>
+</script>
+<script type="text/ng-template" id="newModal">
+    <div class="modal-header">
+        <h3 class="modal-title">new IP Address</h3>
     </div>
     <div class="modal-body">
         <form>

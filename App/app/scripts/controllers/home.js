@@ -30,6 +30,25 @@ angular.module('appApp')
             });
         };
         
+        $scope.openNew = function () {
+            
+            var modalInstance = $uibModal.open({
+                animation: $scope.animationsEnabled,
+                templateUrl: 'newModal',
+                controller: 'NewModalInstanceCtrl',
+                resolve: {
+                   // people: function () { return ipaddressData.hostname }
+                }
+            });
+            modalInstance.result.then(function () {
+                //save button
+                $scope.editAddress();
+            }, function () {
+                //cancel button
+                $log.info('Modal dismissed at: ' + new Date());
+            });
+        };
+        
         //get the data
         function getData() {
             $http({
@@ -113,6 +132,19 @@ angular.module('appApp')
         };
     });
 angular.module('appApp').controller('EditModalInstanceCtrl', function ($scope, $uibModalInstance, $state) {
+
+ 
+
+  $scope.ok = function () {
+    $uibModalInstance.close();
+    $state.go($state.current, {}, {reload: true});
+  };
+
+  $scope.cancel = function () {
+    $uibModalInstance.dismiss('cancel');
+  };
+});
+angular.module('appApp').controller('NewModalInstanceCtrl', function ($scope, $uibModalInstance, $state) {
 
  
 
