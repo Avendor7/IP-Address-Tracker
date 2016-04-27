@@ -92,20 +92,28 @@ angular.module('appApp')
       });
 
     };
-    // MODAL WINDOW
-      $scope.open = function (_address) {
+    
+    $scope.items = ['item1', 'item2', 'item3'];
+    
+    $scope.open = function (size) {
 
-          var modalInstance = $uibModal.open({
-            controller: "EditmodalinstanceCtrl",
-            templateUrl: 'myModalContent.html',
-              resolve: {
-                  address: function()
-                  {
-                      return _address;
-                  }
-              }
-               });
+    var modalInstance = $uibModal.open({
+      animation: $scope.animationsEnabled,
+      templateUrl: 'myModalContent.html',
+      controller: 'EditModalInstanceCtrl',
+      size: size,
+      resolve: {
+        items: function () {
+          return $scope.items;
+        }
+      }
+    });
 
-      };
+    modalInstance.result.then(function (selectedItem) {
+      $scope.selected = selectedItem;
+    }, function () {
+      $log.info('Modal dismissed at: ' + new Date());
+    });
+  };
 
   });
