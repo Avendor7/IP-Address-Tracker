@@ -8,15 +8,30 @@
  * Controller of the appApp
  */
 angular.module('appApp')
-  .controller('HomeCtrl', function ($http, $scope, API_ENDPOINT, $state, $uibModal, $log, dataService) {
+  .controller('HomeCtrl', function ($http, $scope, API_ENDPOINT, $state, $uibModal, $log, dataService, dataFactory) {
 
 
     //get the data
-    dataService.getAddress().then(function (data) {
-      $scope.ipaddressData = data;
-      // console.log($scope.address);
-    });
-
+  
+   
+    
+    
+    dataFactory.getAll()
+        .success(function (response) {
+          var address = response;
+          $scope.ipaddressData = address;
+        })
+        .error(function (response, status) {
+          switch (status) {
+          case 404:
+            console.log("404, can't get all data")
+            break;
+          default:
+            console.log("General Error")
+            break;
+          }
+        });
+        console.log($scope.ipaddressData);
     // $http({
     //   method: 'GET',
     //   url: 'http://localhost:1337/ipaddress'
@@ -90,17 +105,14 @@ angular.module('appApp')
 
     //$scope.items = $scope.getData();
 
-    $scope.open = function (size) {
-      dataService.getAddress().then(function (data) {
-        $scope.ipaddressData = data;
-      });
+    $scope.open = function (id) {
       var modalInstance = $uibModal.open({
         animation: $scope.animationsEnabled,
         templateUrl: 'myModalContent.html',
         controller: 'EditModalInstanceCtrl',
-        size: size,
         resolve: {
           addressData: function () {
+            console.log(id);
             return $scope.ipaddressData;
           }
         }

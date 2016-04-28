@@ -20,7 +20,7 @@
           <td>{{ x.OS }}</td>
           <td>{{ x.description }}</td>
           <td>
-            <button type="button" class="btn btn-default" ng-click="open()">Open me!</button>
+            <button type="button" class="btn btn-default" ng-click="open(x.id)">Open me!</button>
             <button type="button" class="btn btn-lg" ng-click="deleteAddress(x.id)">Delete</button>
           </td>
         </tr>

@@ -11,7 +11,7 @@ angular.module('appApp')
   .controller('EditModalInstanceCtrl', function ($scope, $uibModalInstance, addressData) {
      $scope.ipaddressData = addressData;
  
-     console.log($scope.ipaddressData);
+     //console.log($scope.ipaddressData);
      
      
   $scope.ok = function () {
