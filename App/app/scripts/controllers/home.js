@@ -31,7 +31,7 @@ angular.module('appApp')
             break;
         }
       });
- //   console.log($scope.ipaddressData);
+    //   console.log($scope.ipaddressData);
 
 
     //   $http({
@@ -113,6 +113,23 @@ angular.module('appApp')
         .success(function (response) {
           $scope.editAddress = response;
           console.log($scope.editAddress);
+
+          var modalInstance = $uibModal.open({
+            animation: $scope.animationsEnabled,
+            templateUrl: 'myModalContent.html',
+            controller: 'EditModalInstanceCtrl',
+            resolve: {
+              addressData: function () {
+                console.log(id);
+                console.log($scope.editAddress);
+                return $scope.editAddress;
+              }
+            }
+          });
+
+
+
+
         })
         .error(function (response, status) {
           switch (status) {
@@ -125,18 +142,6 @@ angular.module('appApp')
           }
         });
 
-      var modalInstance = $uibModal.open({
-        animation: $scope.animationsEnabled,
-        templateUrl: 'myModalContent.html',
-        controller: 'EditModalInstanceCtrl',
-        resolve: {
-          addressData: function () {
-            console.log(id);
-            console.log($scope.editAddress);
-            return $scope.editAddress;
-          }
-        }
-      });
 
       modalInstance.result.then(function (selectedItem) {
         $scope.selected = selectedItem;
