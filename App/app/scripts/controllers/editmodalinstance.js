@@ -8,14 +8,15 @@
  * Controller of the appApp
  */
 angular.module('appApp')
-  .controller('EditModalInstanceCtrl', function ($scope, $uibModalInstance, items) {
-     $scope.items = items;
-  $scope.selected = {
-    item: $scope.items[0]
-  };
-
+  .controller('EditModalInstanceCtrl', function ($scope, $uibModalInstance, addressData) {
+     $scope.ipaddressData = addressData;
+ 
+     console.log($scope.ipaddressData);
+     
+     
   $scope.ok = function () {
-    $uibModalInstance.close($scope.selected.item);
+   // $uibModalInstance.close($scope.selected.item);
+    
   };
 
   $scope.cancel = function () {
