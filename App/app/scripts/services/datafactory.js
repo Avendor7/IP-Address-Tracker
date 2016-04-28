@@ -25,6 +25,15 @@ angular.module('appApp')
        */
       getAll: function () {
         return $http.get('http://localhost:1337/ipaddress');
+      },
+      put: function () {
+        return $http.put('http://localhost:1337/ipaddress'+ id);
+      },
+      delete: function () {
+        return $http.get('http://localhost:1337/ipaddress'+ id);
+      },
+      post: function () {
+        return $http.get('http://localhost:1337/ipaddress');
       }
     }
   });
