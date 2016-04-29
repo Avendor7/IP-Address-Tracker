@@ -9,6 +9,8 @@
  */
 angular.module('appApp')
   .controller('NewModalInstanceCtrl', function ($scope, $uibModalInstance) {
+    
+   
    
     $scope.ok = function () {
       $uibModalInstance.close($scope.ipaddressData);

@@ -10,7 +10,7 @@
 angular.module('appApp')
   .controller('HomeCtrl', function ($http, $scope, API_ENDPOINT, $state, $uibModal, $log, dataService, dataFactory) {
 
-
+   
     //get the data
     function getAllData() {
       dataFactory.getAll()

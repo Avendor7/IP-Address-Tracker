@@ -21,6 +21,7 @@ module.exports = {
         },
         VM: {
             type: 'boolean',
+            required: true,
             defaultsTo: false
         },
         operatingSystem: {
