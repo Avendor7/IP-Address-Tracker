@@ -39,36 +39,35 @@
       <h4 class="modal-title">Edit IP Address</h4>
     </div>
     <div class="modal-body">
-      <p>{{ editAddress.hostname }}</p>
       <form>
         <div class="form-group">
           <span class="label label-default control-label">Hostname</span>
-          <input type="text" class="form-control" placeholder="{{ ipaddressData.hostname }}" ng-model="address.hostname">
+          <input type="text" class="form-control" placeholder="{{ ipaddressData.hostname }}" data-ng-model="ipaddressData.hostname">
         </div>
         <div class="form-group">
           <span class="label label-default control-label">IP Address</span>
-          <input type="text" class="form-control" placeholder="{{ ipaddressData.ipv4 }}" ng-model="address.ipv4">
+          <input type="text" class="form-control" placeholder="{{ ipaddressData.ipv4 }}" data-ng-model="ipaddressData.ipv4">
         </div>
         <div class="form-group">
           <span class="label label-default control-label">VM</span>
-          <input type="checkbox" class="form-control" placeholder="{{ ipaddressData.VM }}" ng-model="address.VM">
+          <input type="checkbox" class="form-control" placeholder="{{ ipaddressData.VM }}" data-ng-model="ipaddressData.VM">
         </div>
         <div class="form-group">
           <span class="label label-default control-label">Operating System</span>
-          <input type="text" class="form-control" placeholder="{{ ipaddressData.OS }}" ng-model="address.OS">
+          <input type="text" class="form-control" placeholder="{{ ipaddressData.OS }}" data-ng-model="ipaddressData.OS">
         </div>
         <div class="form-group">
           <span class="label label-default control-label">Description</span>
-          <input type="text" class="form-control" placeholder="{{ ipaddressData.description }}" ng-model="address.description">
+          <input type="text" class="form-control" placeholder="{{ ipaddressData.description }}" data-ng-model="ipaddressData.description">
         </div>
         <div class="form-group">
-          <input type="hidden" ng-model="address.id">
+          <input type="hidden" data-ng-model="ipaddressData.id">
         </div>
       </form>
     </div>
 
     <div class="modal-footer">
-      <button class="btn btn-primary" type="button" ng-click="ok()">OK</button>
+      <button class="btn btn-primary" type="submit" data-ng-click="ok()">OK</button>
       <button class="btn btn-warning" type="button" ng-click="cancel()">Cancel</button>
     </div>
 </script>

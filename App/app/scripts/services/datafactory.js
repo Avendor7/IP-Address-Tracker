@@ -10,30 +10,24 @@
 angular.module('appApp')
   .factory('dataFactory', function ($http) {
     return {
-      /**
-       * One time fetch from server for single Dog dataset based on id
-       * @method get
-       * @param id
-       */
+   
       get: function (id) {
-        return $http.get('http://localhost:1337/ipaddress/'+ id);
+        return $http.get('http://localhost:1337/ipaddress/' + id);
       },
 
-      /**
-       * One time fetch from server for full Dog dataset
-       * @method getAll
-       */
       getAll: function () {
         return $http.get('http://localhost:1337/ipaddress');
       },
-      put: function () {
-        return $http.put('http://localhost:1337/ipaddress'+ id);
+      
+      put: function (data) {
+        return $http.put('http://localhost:1337/ipAddress/' + data.id, data);
       },
-      delete: function () {
-        return $http.get('http://localhost:1337/ipaddress'+ id);
+      
+      delete: function (id) {
+        return $http.delete('http://localhost:1337/ipaddress/' + id);
       },
-      post: function () {
-        return $http.get('http://localhost:1337/ipaddress');
+      post: function (data) {
+        return $http.get('http://localhost:1337/ipaddress', data);
       }
     }
   });

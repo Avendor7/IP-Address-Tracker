@@ -9,17 +9,16 @@
  */
 angular.module('appApp')
   .controller('EditModalInstanceCtrl', function ($scope, $uibModalInstance, addressData) {
-     $scope.ipaddressData = addressData;
- 
-   //  console.log($scope.ipaddressData);
-     
-     
-  $scope.ok = function () {
-   // $uibModalInstance.close($scope.selected.item);
-    
-  };
+    $scope.ipaddressData = addressData;
 
-  $scope.cancel = function () {
-    $uibModalInstance.dismiss('cancel');
-  };
+
+
+    $scope.ok = function () {
+      $uibModalInstance.close($scope.ipaddressData);
+      //console.log($scope.ipaddressData);
+    };
+
+    $scope.cancel = function () {
+      $uibModalInstance.dismiss('cancel');
+    };
   });
