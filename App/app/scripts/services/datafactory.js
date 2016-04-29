@@ -27,7 +27,7 @@ angular.module('appApp')
         return $http.delete('http://localhost:1337/ipaddress/' + id);
       },
       post: function (data) {
-        return $http.get('http://localhost:1337/ipaddress', data);
+        return $http.post('http://localhost:1337/ipaddress', data);
       }
     }
   });

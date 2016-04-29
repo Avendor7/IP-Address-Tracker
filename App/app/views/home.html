@@ -20,19 +20,18 @@
           <td>{{ x.OS }}</td>
           <td>{{ x.description }}</td>
           <td>
-            <button type="button" class="btn btn-default" ng-click="open(x.id)">Open me!</button>
+            <button type="button" class="btn btn-default" ng-click="openEdit(x.id)">Open me!</button>
             <button type="button" class="btn btn-lg" ng-click="deleteAddress(x.id)">Delete</button>
           </td>
         </tr>
       </tbody>
     </table>
   </div>
-  <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#newAddressModal">New IP Address</button>
   <button type="button" class="btn btn-default" ng-click="openNew()">New Address</button>
 </div>
 
-<!--modal-->
-<script type="text/ng-template" id="myModalContent.html">
+<!--edit modal-->
+<script type="text/ng-template" id="editModal.html">
   <div class="modal-content">
     <div class="modal-header">
       <button type="button" class="close" data-dismiss="modal">&times;</button>
@@ -62,6 +61,45 @@
         </div>
         <div class="form-group">
           <input type="hidden" data-ng-model="ipaddressData.id">
+        </div>
+      </form>
+    </div>
+
+    <div class="modal-footer">
+      <button class="btn btn-primary" type="submit" data-ng-click="ok()">OK</button>
+      <button class="btn btn-warning" type="button" ng-click="cancel()">Cancel</button>
+    </div>
+</script>
+
+
+<!--new modal-->
+<script type="text/ng-template" id="newModal.html">
+  <div class="modal-content">
+    <div class="modal-header">
+      <button type="button" class="close" data-dismiss="modal">&times;</button>
+      <h4 class="modal-title">New IP Address</h4>
+    </div>
+    <div class="modal-body">
+      <form>
+        <div class="form-group">
+          <span class="label label-default control-label">Hostname</span>
+          <input type="text" class="form-control"  data-ng-model="ipaddressData.hostname">
+        </div>
+        <div class="form-group">
+          <span class="label label-default control-label">IP Address</span>
+          <input type="text" class="form-control"  data-ng-model="ipaddressData.ipv4">
+        </div>
+        <div class="form-group">
+          <span class="label label-default control-label">VM</span>
+          <input type="checkbox" class="form-control"  data-ng-model="ipaddressData.VM">
+        </div>
+        <div class="form-group">
+          <span class="label label-default control-label">Operating System</span>
+          <input type="text" class="form-control"  data-ng-model="ipaddressData.OS">
+        </div>
+        <div class="form-group">
+          <span class="label label-default control-label">Description</span>
+          <input type="text" class="form-control"  data-ng-model="ipaddressData.description">
         </div>
       </form>
     </div>
