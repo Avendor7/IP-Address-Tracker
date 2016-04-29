@@ -1,5 +1,5 @@
 <div class="container" style="background-color:white; color:black;">
-  <h2>Table</h2>
+  <h2>Static IP Addresses and Machine Information</h2>
   <div class="table-responsive">
     <table class="table table-striped table-bordered table-hover table-responsive">
       <thead>
@@ -20,14 +20,14 @@
           <td>{{ x.OS }}</td>
           <td>{{ x.description }}</td>
           <td>
-            <button type="button" class="btn btn-default" ng-click="openEdit(x.id)">Open me!</button>
+            <button type="button" class="btn btn-default" ng-click="openEdit(x.id)">Edit</button>
             <button type="button" class="btn btn-lg" ng-click="deleteAddress(x.id)">Delete</button>
           </td>
         </tr>
       </tbody>
     </table>
   </div>
-  <button type="button" class="btn btn-default" ng-click="openNew()">New Address</button>
+  <button type="button" class="btn btn-default" ng-click="openNew()">Add New Address</button>
 </div>
 
 <!--edit modal-->
