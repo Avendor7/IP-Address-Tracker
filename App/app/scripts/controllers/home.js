@@ -105,32 +105,35 @@ angular.module('appApp')
 
     //   };
 
-    //$scope.items = $scope.getData();
+    
 
+
+    //edit button pressed
     $scope.open = function (id) {
-      $scope.editAddress = null;
+      //query the database using the factory with inserted id
       dataFactory.get(id)
         .success(function (response) {
+          //set the scope from the response
           $scope.editAddress = response;
-          console.log($scope.editAddress);
-
+          //actually open the modal, inserting the data from the DB in the DB callback
           var modalInstance = $uibModal.open({
             animation: $scope.animationsEnabled,
             templateUrl: 'myModalContent.html',
             controller: 'EditModalInstanceCtrl',
             resolve: {
               addressData: function () {
-                console.log(id);
-                console.log($scope.editAddress);
                 return $scope.editAddress;
               }
             }
           });
-
-
-
-
+          //modal result callback
+          modalInstance.result.then(function (selectedItem) {
+            $scope.selected = selectedItem;
+          }, function () {
+            $log.info('Modal dismissed at: ' + new Date());
+          });
         })
+        //DB error, no modal is opened
         .error(function (response, status) {
           switch (status) {
             case 404:
@@ -141,13 +144,5 @@ angular.module('appApp')
               break;
           }
         });
-
-
-      modalInstance.result.then(function (selectedItem) {
-        $scope.selected = selectedItem;
-      }, function () {
-        $log.info('Modal dismissed at: ' + new Date());
-      });
     };
-
   });
