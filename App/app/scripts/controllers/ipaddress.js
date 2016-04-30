@@ -8,7 +8,7 @@
  * Controller of the appApp
  */
 angular.module('appApp')
-  .controller('HomeCtrl', function ($http, $scope, API_ENDPOINT, $state, $uibModal, $log, dataService, dataFactory) {
+  .controller('IPAddressCtrl', function ($http, $scope, API_ENDPOINT, $state, $uibModal, $log, dataService, dataFactory) {
 
    
     //get the data
@@ -29,44 +29,10 @@ angular.module('appApp')
           }
         });
     }
+    
+    //start load by grabbing all of the ip addresses from the DB
     getAllData();
-
-    //  // post new data
-
-    //   $http({
-    //     method: 'POST',
-    //     url: 'http://localhost:1337/ipAddress',
-    //     data: $scope.address
-    //   }).then(function successCallback(response) {
-    //     // this callback will be called asynchronously
-    //     // when the response is available
-    //     $scope.ipaddressData = response.data;
-    //     console.log(response.data);
-    //   }, function errorCallback(response) {
-    //     // called asynchronously if an error occurs
-    //     // or server returns response with an error status.
-    //     $scope.ipaddressData = response.data;
-    //     console.log(response.data);
-    //   });
-
-
-    //   //put update current data from current id
-
-    // $http({
-    //   method: 'PUT',
-    //   url: 'http://localhost:1337/ipAddress',
-    //   data: $scope.address
-    // }).then(function successCallback(response) {
-    //   // this callback will be called asynchronously
-    //   // when the response is available
-    //   $scope.ipaddressData = response.data;
-    // }, function errorCallback(response) {
-    //   // called asynchronously if an error occurs
-    //   // or server returns response with an error status.
-    //   $scope.ipaddressData = response.data;
-    //   console.log(response.data);
-    // });
-
+    
     //delete data from ID
     $scope.deleteAddress = function (id) {
       dataFactory.delete(id)

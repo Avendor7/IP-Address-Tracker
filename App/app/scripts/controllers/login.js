@@ -12,7 +12,7 @@ angular.module('appApp')
 
     $scope.loginNow = function() {
       Auth.login($scope.user).success(function(result) {
-        $state.go('user.home');
+        $state.go('user.ipaddress');
       }).error(function(err) {
         //$scope.errors.push(err);
       });

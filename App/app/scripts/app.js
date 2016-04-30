@@ -33,6 +33,12 @@ angular
                 controller: 'LogoffCtrl',
                 controllerAs: 'logoff',
                 url: '/logoff'
+            })
+            .state('anon.resume', {
+                templateUrl: 'views/resume.html',
+                controller: 'ResumeCtrl',
+                controllerAs: 'resume',
+                url: '/resume'
             });
             
         $stateProvider
@@ -43,12 +49,13 @@ angular
                     access: AccessLevels.user
                 }
             })
-            .state('user.home', {
-                templateUrl: 'views/home.html',
-                controller: 'HomeCtrl',
+            .state('user.ipaddress', {
+                templateUrl: 'views/ipaddress.html',
+                controller: 'IPAddressCtrl',
                 url: '/'
             });
             
+       
         $urlRouterProvider.otherwise('/');
         $httpProvider.interceptors.push('AuthInterceptor');
 

@@ -1,13 +1,14 @@
 //colors
 $red: #ff0000;
 $black: #000;
-$color_limed_spruce_approx: #37474f;
+$color_limed_spruce_approx: #374755;
 $color_log_cabin_approx: #212121;
 $color_gallery_approx: #eee;
 $alabaster: #fafafa;
-$green: #009688;
+$color_gossamer_approx: #007796;
 $white_84: rgba(255, 255, 255, 0.84);
 $white: white;
+$linkColour:#337ab7;
 
 //fonts
 $font_0: Ubuntu;
@@ -26,6 +27,9 @@ body {
 	padding-top: 70px;
 	background-color: $color_limed_spruce_approx;
 	font-family: $font_0, $font_1;
+}
+p {
+	font-size: 16px;
 }
 .header {
 	position: absolute;
@@ -54,24 +58,38 @@ body {
 	p {
 		margin: 15px;
 	}
+    a{
+        color:$linkColour;
+    }
 }
 .card {
-	margin-top: 15px;
 	background-color: $color_log_cabin_approx;
 	color: $alabaster;
-	font-size: 14px;
-	padding: 0;
+	font-size: 12pt;
+    padding: 10px;
 	.card-heading {
-		background-color: $green;
+		background-color: $color_gossamer_approx;
 		color: $white_84;
-		border: 0;
-		padding: 10px 15px;
+        padding:5px;
+        margin-top: -20px;
+        margin-left: -15px;
+        margin-right: -15px;
 		border-bottom: 1px solid transparent;
+        font-family: $font_0;
+        h2{
+            margin-top:10px;
+            margin-left:10px;
+            
+        }
+        h3{
+            font-size:26pt;
+        }
 	}
 	.card-white {
 		background-color: $color_gallery_approx;
 		color: $black;
 	}
+    
 }
 .card-pad {
 	margin-top: 60px;
@@ -90,11 +108,29 @@ body {
 	margin-bottom: 100px;
 }
 .btn {
-	background-color: $green;
+	background-color: $color_gossamer_approx;
 	color: $white;
 }
+hr {
+	background-color: $color_gossamer_approx;
+}
+
 img.login-logo {
 	padding: 35px;
 	height: 200px;
 	width: 400px;
+}
+
+.no-bullets {
+     margin-left:0;
+     padding-left:0;
+     
+	li{
+        list-style: none;
+    }
+    
+}
+.topbottomPadding{
+    padding-top:15px;
+    padding-bottom: 15px;
 }
