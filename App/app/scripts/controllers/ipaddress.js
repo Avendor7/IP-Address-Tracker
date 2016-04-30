@@ -19,15 +19,15 @@ angular.module('appApp')
           $scope.ipaddressData = address;
         })
         .error(function (response, status) {
-          switch (status) {
-            case 404:
-              console.log("404, can't get all data")
-              break;
-            default:
-              console.log("General Error")
-              break;
-          }
-        });
+            switch (status) {
+              case 404:
+                console.log('404 server not found');
+                break;
+              default:
+                console.log('General Error');
+                break;
+            }
+          });
     }
     
     //start load by grabbing all of the ip addresses from the DB
@@ -36,19 +36,19 @@ angular.module('appApp')
     //delete data from ID
     $scope.deleteAddress = function (id) {
       dataFactory.delete(id)
-        .success(function (response) {
+        .success(function () {
           getAllData();
         })
         .error(function (response, status) {
-          switch (status) {
-            case 404:
-              console.log("404, can't get all data")
-              break;
-            default:
-              console.log("General Error")
-              break;
-          }
-        });
+            switch (status) {
+              case 404:
+                console.log('404 server not found');
+                break;
+              default:
+                console.log('General Error');
+                break;
+            }
+          });
 
     };
 
@@ -78,19 +78,19 @@ angular.module('appApp')
             $scope.updatedData = data;
             //write put request to database factory
             dataFactory.put($scope.updatedData)
-              .success(function (response) {
+              .success(function () {
                 getAllData();
               })
               .error(function (response, status) {
-                switch (status) {
-                  case 404:
-                    console.log("404, can't get all data")
-                    break;
-                  default:
-                    console.log("General Error")
-                    break;
-                }
-              });
+            switch (status) {
+              case 404:
+                console.log('404 server not found');
+                break;
+              default:
+                console.log('General Error');
+                break;
+            }
+          });
 
 
           }, function () {
@@ -99,15 +99,15 @@ angular.module('appApp')
         })
         //DB error, no modal is opened
         .error(function (response, status) {
-          switch (status) {
-            case 404:
-              console.log("404, can't get all data")
-              break;
-            default:
-              console.log("General Error")
-              break;
-          }
-        });
+            switch (status) {
+              case 404:
+                console.log('404 server not found');
+                break;
+              default:
+                console.log('General Error');
+                break;
+            }
+          });
 
     };
 
@@ -128,16 +128,16 @@ angular.module('appApp')
         
         //write put request to database factory
         dataFactory.post($scope.newData)
-          .success(function (response) {
+          .success(function () {
             getAllData();
           })
           .error(function (response, status) {
             switch (status) {
               case 404:
-                console.log("404, can't get all data")
+                console.log('404 server not found');
                 break;
               default:
-                console.log("General Error")
+                console.log('General Error');
                 break;
             }
           });

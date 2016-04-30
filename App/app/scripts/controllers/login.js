@@ -11,9 +11,9 @@ angular.module('appApp')
     .controller('LoginCtrl', function($scope, $state, Auth) {
 
     $scope.loginNow = function() {
-      Auth.login($scope.user).success(function(result) {
+      Auth.login($scope.user).success(function(/*result*/) {
         $state.go('user.ipaddress');
-      }).error(function(err) {
+      }).error(function(/*err*/) {
         //$scope.errors.push(err);
       });
     };

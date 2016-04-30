@@ -29,5 +29,5 @@ angular.module('appApp')
       post: function (data) {
         return $http.post('http://localhost:1337/ipaddress', data);
       }
-    }
+    };
   });

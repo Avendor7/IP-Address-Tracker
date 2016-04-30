@@ -67,7 +67,7 @@ angular
 
     })
     .run(function ($rootScope, $state, Auth) {
-        $rootScope.$on('$stateChangeStart', function (event, toState, toParams, fromState, fromParams) {
+        $rootScope.$on('$stateChangeStart', function (event, toState) {
             if (!Auth.authorize(toState.data.access)) {
                 event.preventDefault();
                 $state.go('anon.login');
