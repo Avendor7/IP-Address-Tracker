@@ -34,6 +34,12 @@ angular
                 controllerAs: 'logoff',
                 url: '/logoff'
             })
+            .state('anon.blog', {
+                templateUrl: 'views/blog.html',
+                controller: 'BlogCtrl',
+                controllerAs: 'blog',
+                url: '/'
+            })
             .state('anon.resume', {
                 templateUrl: 'views/resume.html',
                 controller: 'ResumeCtrl',
