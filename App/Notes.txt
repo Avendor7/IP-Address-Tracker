@@ -1,0 +1,6 @@
+Blog pages
+
+Main page in chronological order most recent first of posts -titles and text limited to 500 characters, posts are paginated
+new post page - locked down to logged in (no multi user access)
+post page where a visitor can read the entire post - delete button for admin
+edit post -locked down
