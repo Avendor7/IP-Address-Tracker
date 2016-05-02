@@ -58,7 +58,7 @@ angular
             .state('user.ipaddress', {
                 templateUrl: 'views/ipaddress.html',
                 controller: 'IPAddressCtrl',
-                url: '/'
+                url: '/IPAddressManager'
             });
             
        
