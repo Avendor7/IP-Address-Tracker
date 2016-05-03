@@ -17,7 +17,7 @@
           <td>{{ x.hostname }}</td>
           <td>{{ x.ipv4 }}</td>
           <td>{{ x.VM }}</td>
-          <td>{{ x.OS }}</td>
+          <td>{{ x.operatingSystem }}</td>
           <td>{{ x.description }}</td>
           <td>
             <button type="button" class="btn btn-default" ng-click="openEdit(x.id)">Edit</button>
@@ -53,7 +53,7 @@
         </div>
         <div class="form-group">
           <span class="label label-default control-label">Operating System</span>
-          <input type="text" class="form-control" placeholder="{{ ipaddressData.OS }}" data-ng-model="ipaddressData.OS">
+          <input type="text" class="form-control" placeholder="{{ ipaddressData.operatingSystem }}" data-ng-model="ipaddressData.OS">
         </div>
         <div class="form-group">
           <span class="label label-default control-label">Description</span>
@@ -91,11 +91,11 @@
         </div>
         <div class="form-group">
           <span class="label label-default control-label">VM</span>
-          <input type="checkbox" class="form-control" ng-init="ipaddressData.VM=false" data-ng-model="ipaddressData.VM">
+          <input type="checkbox" class="form-control" data-ng-model="ipaddressData.VM">
         </div>
         <div class="form-group">
           <span class="label label-default control-label">Operating System</span>
-          <input type="text" class="form-control"  data-ng-model="ipaddressData.OS">
+          <input type="text" class="form-control"  data-ng-model="ipaddressData.operatingSystem">
         </div>
         <div class="form-group">
           <span class="label label-default control-label">Description</span>
