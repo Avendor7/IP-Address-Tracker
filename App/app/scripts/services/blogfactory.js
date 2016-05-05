@@ -9,15 +9,25 @@
  */
 angular.module('appApp')
   .factory('blogFactory', function () {
-    // Service logic
-    // ...
+      return {
+   
+      get: function (id) {
+        return $http.get('http://localhost:1337/blog/' + id);
+      },
 
-    var meaningOfLife = 42;
-
-    // Public API here
-    return {
-      someMethod: function () {
-        return meaningOfLife;
+      getAll: function () {
+        return $http.get('http://localhost:1337/blog');
+      },
+      
+      put: function (data) {
+        return $http.put('http://localhost:1337/blog/' + data.id, data);
+      },
+      
+      delete: function (id) {
+        return $http.delete('http://localhost:1337/blog/' + id);
+      },
+      post: function (data) {
+        return $http.post('http://localhost:1337/blog', data);
       }
     };
   });
