@@ -31,5 +31,11 @@
         "dist/js/bootstrap.js"
       ]
     }
+  },
+   "exportsOverride": {
+    "font-awesome": {
+      "fonts": "fonts/*",
+      "css": "css/font-awesome.css"
+    }
   }
 }
