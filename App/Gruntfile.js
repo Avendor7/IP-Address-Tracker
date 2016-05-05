@@ -84,11 +84,11 @@ module.exports = function (grunt) {
                             connect().use(
                                 '/bower_components',
                                 connect.static('./bower_components')
-                                ),
+                            ),
                             connect().use(
                                 '/app/styles',
                                 connect.static('./app/styles')
-                                ),
+                            ),
                             connect.static(appConfig.app)
                         ];
                     }
@@ -104,7 +104,7 @@ module.exports = function (grunt) {
                             connect().use(
                                 '/bower_components',
                                 connect.static('./bower_components')
-                                ),
+                            ),
                             connect.static(appConfig.app)
                         ];
                     }
@@ -225,7 +225,7 @@ module.exports = function (grunt) {
                 src: ['<%= yeoman.app %>/styles/{,*/}*.{scss,sass}'],
                 ignorePath: /(\.\.\/){1,2}bower_components\//
             }
-        }, 
+        },
 
         // Compiles Sass to CSS and generates necessary files if requested
         compass: {
@@ -426,6 +426,12 @@ module.exports = function (grunt) {
                         cwd: '.',
                         src: 'bower_components/bootstrap-sass-official/assets/fonts/bootstrap/*',
                         dest: '<%= yeoman.dist %>'
+                    }, {
+                        expand: true,
+                        dot: true,
+                        cwd: 'bower_components/bootstrap/dist', // change this for font-awesome
+                        src: ['fonts/*.*'],
+                        dest: '<%= config.dist %>'
                     }]
             },
             styles: {
@@ -435,6 +441,7 @@ module.exports = function (grunt) {
                 src: '{,*/}*.css'
             }
         },
+
 
         // Run some tasks in parallel to speed up the build process
         concurrent: {

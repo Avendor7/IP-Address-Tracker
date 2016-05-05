@@ -11,7 +11,9 @@
 angular
     .module('appApp', [
         'ui.router',
-         'ui.bootstrap'
+         'ui.bootstrap',
+         'wysiwyg.module'
+         
     ])
     .config(function ($stateProvider, $urlRouterProvider, AccessLevels, $httpProvider) {
         $stateProvider
@@ -45,6 +47,11 @@ angular
                 controller: 'ResumeCtrl',
                 controllerAs: 'resume',
                 url: '/resume'
+            })
+            .state('anon.post', {
+                templateUrl: 'views/post.html',
+                controller: 'PostCtrl',
+                url: '/post'
             });
             
         $stateProvider
@@ -59,9 +66,13 @@ angular
                 templateUrl: 'views/ipaddress.html',
                 controller: 'IPAddressCtrl',
                 url: '/IPAddressManager'
+            })
+            .state('user.new', {
+                templateUrl: 'views/newpost.html',
+                controller: 'NewpostCtrl',
+                url: '/post/new'
             });
             
-       
         $urlRouterProvider.otherwise('/');
         $httpProvider.interceptors.push('AuthInterceptor');
 
