@@ -1,4 +1,3 @@
-
 <div class="container-fluid margin-bottom-15">
     <div class="col-sm-12">
         <div class="card card-pad">
@@ -6,11 +5,13 @@
                 <h2>Blog Post Title</h2>
             </div>
             <div class="col-sm-12">
-<wysiwyg textarea-id="question" textarea-class="form-control"  textarea-height="80px" textarea-name="textareaQuestion" textarea-required ng-model="yourModel.model" enable-bootstrap-title="true" textarea-menu="yourModel.customMenu"></wysiwyg>
-               
+                <text-angular ng-model="htmlVariable"></text-angular>
+
             </div>
         </div>
+        
+        <div style="background-color:white;">
+            {{htmlVariable}}
+         </div>
     </div>
 </div>
-
-

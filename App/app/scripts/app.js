@@ -12,7 +12,7 @@ angular
     .module('appApp', [
         'ui.router',
          'ui.bootstrap',
-         'wysiwyg.module'
+         'textAngular'
          
     ])
     .config(function ($stateProvider, $urlRouterProvider, AccessLevels, $httpProvider) {

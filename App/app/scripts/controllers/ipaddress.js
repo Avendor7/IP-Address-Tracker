@@ -8,7 +8,7 @@
  * Controller of the appApp
  */
 angular.module('appApp')
-  .controller('IPAddressCtrl', function ($http, $scope, API_ENDPOINT, $state, $uibModal, $log, dataService, dataFactory) {
+  .controller('IPAddressCtrl', function ($http, $scope, API_ENDPOINT, $state, $uibModal, $log, dataService, ipaddressFactory) {
 
    
     //get the data
