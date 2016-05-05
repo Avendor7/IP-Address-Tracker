@@ -19,21 +19,7 @@ module.exports = {
             type: 'string',
             required: true,
             unique: true
-        },
-        VM: {
-            type: 'boolean',
-            required: true,
-            defaultsTo: false
-        },
-        operatingSystem: {
-            type: 'string',
-            required: true
-        },
-        description: {
-            type: 'text',
-            required: true
         }
-        
     }
 };
 

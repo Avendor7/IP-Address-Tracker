@@ -5,13 +5,16 @@
                 <h2>Blog Post Title</h2>
             </div>
             <div class="col-sm-12">
-                <text-angular ng-model="htmlVariable"></text-angular>
+                <text-angular ng-model="newPostHTML"></text-angular>
 
             </div>
         </div>
-        
+
         <div style="background-color:white;">
-            {{htmlVariable}}
-         </div>
+            {{newPostHTML}}
+        </div>
+        <div>
+            <button type="button" class="btn" ng-click="openNew()">Save Post</button>
+        </div>
     </div>
 </div>

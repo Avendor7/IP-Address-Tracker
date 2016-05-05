@@ -8,12 +8,12 @@
  * Controller of the appApp
  */
 angular.module('appApp')
-  .controller('IPAddressCtrl', function ($http, $scope, API_ENDPOINT, $state, $uibModal, $log, dataService, ipaddressFactory) {
+  .controller('IPAddressCtrl', function ($http, $scope, API_ENDPOINT, $state, $uibModal, $log, ipaddressFactory) {
 
    
     //get the data
     function getAllData() {
-      dataFactory.getAll()
+      ipaddressFactory.getAll()
         .success(function (response) {
           var address = response;
           $scope.ipaddressData = address;
@@ -35,7 +35,7 @@ angular.module('appApp')
     
     //delete data from ID
     $scope.deleteAddress = function (id) {
-      dataFactory.delete(id)
+      ipaddressFactory.delete(id)
         .success(function () {
           getAllData();
         })
@@ -58,7 +58,7 @@ angular.module('appApp')
     //edit button pressed
     $scope.openEdit = function (id) {
       //query the database using the factory with inserted id
-      dataFactory.get(id)
+      ipaddressFactory.get(id)
         .success(function (response) {
           //set the scope from the response
           $scope.editAddress = response;
@@ -77,7 +77,7 @@ angular.module('appApp')
           modalInstance.result.then(function (data) {
             $scope.updatedData = data;
             //write put request to database factory
-            dataFactory.put($scope.updatedData)
+            ipaddressFactory.put($scope.updatedData)
               .success(function () {
                 getAllData();
               })
@@ -127,7 +127,7 @@ angular.module('appApp')
         $scope.newData = data;
         
         //write put request to database factory
-        dataFactory.post($scope.newData)
+        ipaddressFactory.post($scope.newData)
           .success(function () {
             getAllData();
           })

@@ -8,7 +8,7 @@
  * Factory in the appApp.
  */
 angular.module('appApp')
-  .factory('blogFactory', function () {
+  .factory('blogFactory', function ($http) {
       return {
    
       get: function (id) {

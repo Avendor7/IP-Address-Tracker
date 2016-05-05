@@ -67,7 +67,7 @@ angular
                 controller: 'IPAddressCtrl',
                 url: '/IPAddressManager'
             })
-            .state('user.new', {
+            .state('user.newPost', {
                 templateUrl: 'views/newpost.html',
                 controller: 'NewpostCtrl',
                 url: '/post/new'
