@@ -5,16 +5,16 @@
                 <h2>Blog Post Title</h2>
             </div>
             <div class="col-sm-12">
-                <text-angular ng-model="newPostHTML"></text-angular>
-
+                <text-angular ng-model="newPost.html"></text-angular>
+                <input type="text" class="form-control" placeholder="new title" data-ng-model="newPost.title">
             </div>
         </div>
-
+        
         <div style="background-color:white;">
             {{newPostHTML}}
         </div>
         <div>
-            <button type="button" class="btn" ng-click="openNew()">Save Post</button>
+            <button type="button" class="btn" ng-data-click="makePost()">Save Post</button>
         </div>
     </div>
 </div>
