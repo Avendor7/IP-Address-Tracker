@@ -9,9 +9,5 @@
  */
 angular.module('appApp')
   .controller('PostCtrl', function () {
-    this.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
+    
   });

@@ -1,12 +1,13 @@
-<div class="container-fluid margin-bottom-15">
-    <div class="col-sm-12">
-        <div class="card card-pad">
-            <div class="card-heading">
-                <h2>Blog Post Title</h2>
-            </div>
-            <div class="col-sm-12">
-                <p>Blog content</p>
-                
+<div ng-repeat="x in fullPost">
+    <div class="container-fluid margin-bottom-15">
+        <div class="col-sm-12">
+            <div class="card card-pad">
+                <div class="card-heading">
+                    <h2>{{x.title}}</h2>
+                </div>
+                <div class="col-sm-12" ng-bind-html="x.post">
+                    
+                </div>
             </div>
         </div>
     </div>

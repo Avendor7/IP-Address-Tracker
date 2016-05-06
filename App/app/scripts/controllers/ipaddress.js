@@ -17,6 +17,7 @@ angular.module('appApp')
         .success(function (response) {
           var address = response;
           $scope.ipaddressData = address;
+          
         })
         .error(function (response, status) {
             switch (status) {
