@@ -8,7 +8,25 @@
 module.exports = {
 
   attributes: {
-
+    schema: true,
+    autoPK: true,
+    attributes: {
+        title: {
+            type: 'string',
+            required: true,
+            unique: true
+        },
+        language: {
+            type: 'string',
+            required: true,
+            unique: true
+        },
+        snippet: {
+            type: 'string',
+            required: true,
+            unique: true
+        }
+    }
   }
 };
 
