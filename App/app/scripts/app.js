@@ -73,6 +73,11 @@ angular
                 url: '/post/new'
             });
             
+        .when('/snippets', {
+          templateUrl: 'views/snippets.html',
+          controller: 'SnippetsCtrl',
+          controllerAs: 'snippets'
+        })
         $urlRouterProvider.otherwise('/');
         $httpProvider.interceptors.push('AuthInterceptor');
 
