@@ -11,9 +11,8 @@ angular.module('appApp')
   .controller('BlogCtrl', function ($scope, blogFactory) {
      blogFactory.getAll()
       .success(function (response) {
-        var fullPost = response;
-        $scope.fullPost = fullPost;
-        console.log($scope.fullPost);
+        var allPosts = response;
+        $scope.allPosts = allPosts;
       })
       .error(function (response, status) {
         switch (status) {

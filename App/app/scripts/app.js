@@ -51,7 +51,12 @@ angular
             .state('anon.post', {
                 templateUrl: 'views/post.html',
                 controller: 'PostCtrl',
-                url: '/post'
+                url: '/post/:id'
+            })
+            .state('anon.snippets', {
+                templateUrl: 'views/snippets.html',
+                controller: 'SnippetsCtrl',
+                url: '/snippets'
             });
             
         $stateProvider
@@ -73,11 +78,7 @@ angular
                 url: '/post/new'
             });
             
-        .when('/snippets', {
-          templateUrl: 'views/snippets.html',
-          controller: 'SnippetsCtrl',
-          controllerAs: 'snippets'
-        })
+        
         $urlRouterProvider.otherwise('/');
         $httpProvider.interceptors.push('AuthInterceptor');
 

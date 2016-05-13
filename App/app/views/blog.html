@@ -1,13 +1,13 @@
-<div ng-repeat="x in fullPost">
+<div ng-repeat="x in allPosts">
     <div class="container-fluid margin-bottom-15">
         <div class="col-sm-12">
             <div class="card card-pad">
                 <div class="card-heading">
                     <h2>{{x.title}}</h2>
                 </div>
-                <div class="col-sm-12" ng-bind-html="x.post">
-                    
+                <div class="col-sm-12" ng-bind-html="x.description">
                 </div>
+                <a ui-sref="anon.post({ id: x.id })">View Post</a>
             </div>
         </div>
     </div>
