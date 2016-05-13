@@ -21,6 +21,11 @@ module.exports = {
             required: true,
             unique: true
         },
+        description: {
+            type: 'string',
+            required: true,
+            unique: true
+        },
         snippet: {
             type: 'string',
             required: true,
