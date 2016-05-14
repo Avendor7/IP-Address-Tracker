@@ -52,11 +52,6 @@ angular
                 templateUrl: 'views/post.html',
                 controller: 'PostCtrl',
                 url: '/post/:id'
-            })
-            .state('anon.snippets', {
-                templateUrl: 'views/snippets.html',
-                controller: 'SnippetsCtrl',
-                url: '/snippets'
             });
             
         $stateProvider
@@ -82,10 +77,10 @@ angular
                 controller: 'ViewsnippetsCtrl',
                 url: '/snippets/view'
             })
-            .state('user.newSnippet', {
-                templateUrl: 'views/newsnippet.html',
-                controller: 'NewsnippetCtrl',
-                url: '/snippets/new'
+            .state('user.snippet', {
+                templateUrl: 'views/snippet.html',
+                controller: 'SnippetCtrl',
+                url: '/snippet'
             });
             
         $urlRouterProvider.otherwise('/');
