@@ -12,7 +12,8 @@ angular
     .module('appApp', [
         'ui.router',
          'ui.bootstrap',
-         'textAngular'
+         'textAngular',
+         'ui.ace'
          
     ])
     .config(function ($stateProvider, $urlRouterProvider, AccessLevels, $httpProvider) {
@@ -75,7 +76,7 @@ angular
             .state('user.viewSnippets', {
                 templateUrl: 'views/viewsnippets.html',
                 controller: 'ViewsnippetsCtrl',
-                url: '/snippets'
+                url: '/snippets/view'
             })
             .state('user.snippet', {
                 templateUrl: 'views/snippet.html',
@@ -83,9 +84,9 @@ angular
                 url: '/snippet/:id'
             })
             .state('user.newSnippet', {
-                templateUrl: 'views/newSnippet.html',
+                templateUrl: 'views/newsnippet.html',
                 controller: 'NewsnippetCtrl',
-                url: '/snippet/new/'
+                url: '/newSnippet'
             });
            
         $urlRouterProvider.otherwise('/');
