@@ -81,8 +81,13 @@ angular
                 templateUrl: 'views/snippet.html',
                 controller: 'SnippetCtrl',
                 url: '/snippet'
+            })
+            .state('user.newSnippet', {
+                templateUrl: 'views/newSnippet.html',
+                controller: 'NewsnippetCtrl',
+                url: '/snippet/new'
             });
-            
+           
         $urlRouterProvider.otherwise('/');
         $httpProvider.interceptors.push('AuthInterceptor');
 
