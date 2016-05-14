@@ -70,22 +70,22 @@ angular
             .state('user.newPost', {
                 templateUrl: 'views/newpost.html',
                 controller: 'NewpostCtrl',
-                url: '/post/new'
+                url: '/post/new/'
             })
             .state('user.viewSnippets', {
                 templateUrl: 'views/viewsnippets.html',
                 controller: 'ViewsnippetsCtrl',
-                url: '/snippets/view'
+                url: '/snippets'
             })
             .state('user.snippet', {
                 templateUrl: 'views/snippet.html',
                 controller: 'SnippetCtrl',
-                url: '/snippet'
+                url: '/snippet/:id'
             })
             .state('user.newSnippet', {
                 templateUrl: 'views/newSnippet.html',
                 controller: 'NewsnippetCtrl',
-                url: '/snippet/new'
+                url: '/snippet/new/'
             });
            
         $urlRouterProvider.otherwise('/');
