@@ -8,16 +8,26 @@
  * Factory in the appApp.
  */
 angular.module('appApp')
-  .factory('snippetFactory', function () {
-    // Service logic
-    // ...
+  .factory('snippetFactory', function ($http) {
+   return {
+   
+      get: function (id) {
+        return $http.get('http://localhost:1337/snippet/' + id);
+      },
 
-    var meaningOfLife = 42;
-
-    // Public API here
-    return {
-      someMethod: function () {
-        return meaningOfLife;
+      getAll: function () {
+        return $http.get('http://localhost:1337/snippet');
+      },
+      
+      put: function (data) {
+        return $http.put('http://localhost:1337/snippet/' + data.id, data);
+      },
+      
+      delete: function (id) {
+        return $http.delete('http://localhost:1337/snippet/' + id);
+      },
+      post: function (data) {
+        return $http.post('http://localhost:1337/snippet', data);
       }
     };
   });

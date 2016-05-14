@@ -2,12 +2,12 @@
 
 /**
  * @ngdoc function
- * @name appApp.controller:SnippetsCtrl
+ * @name appApp.controller:SnippetCtrl
  * @description
  * # SnippetsCtrl
  * Controller of the appApp
  */
 angular.module('appApp')
-  .controller('SnippetsCtrl', function () {
+  .controller('SnippetCtrl', function () {
     
   });

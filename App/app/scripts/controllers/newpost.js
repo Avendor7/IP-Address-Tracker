@@ -12,7 +12,6 @@ angular.module('appApp')
     
     function makePost() {
       //write put request to database factory
-      console.log("clicked");
       blogFactory.post($scope.newPost)
         .success(function () {
           //TODO: have factory return the id so $state can be redirected
