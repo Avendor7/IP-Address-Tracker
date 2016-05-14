@@ -4,9 +4,10 @@
             <div class="card-heading">
                 <h2>{{fullSnippet.title}}</h2>
             </div>
-                <div class="editor" ui-ace="{ mode: 'python', theme: 'chrome' }" ng-model="fullSnippet.code"></div>
+            <div>
+                <div class="editor" ui-ace="{  showGutter: 'true', theme: 'chrome', onLoad: aceLoaded, onChange: aceChanged }" ng-model="fullSnippet.code"></div>
 
-                <div class="col-sm-12" ng-bind-html="fullSnippet.code">
+                <button type="button" class="btn" ng-data-click="editSnippet()">Save Post</button>
             </div>
         </div>
     </div>
