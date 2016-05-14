@@ -26,7 +26,7 @@ module.exports = {
             required: true,
             unique: true
         },
-        snippet: {
+        code: {
             type: 'string',
             required: true,
             unique: true

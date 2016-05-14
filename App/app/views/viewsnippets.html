@@ -1,1 +1,14 @@
-<p>This is the viewSnippets view.</p>
+<div ng-repeat="x in allSnippets">
+    <div class="container-fluid margin-bottom-15">
+        <div class="col-sm-12">
+            <div class="card card-pad">
+                <div class="card-heading">
+                    <h2>{{x.title}}</h2>
+                </div>
+                <div class="col-sm-12" ng-bind-html="x.description">
+                </div>
+                <a ui-sref="user.snippet({ id: x.id })">View Snippet</a>
+            </div>
+        </div>
+    </div>
+</div>
