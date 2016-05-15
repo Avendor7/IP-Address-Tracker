@@ -9,7 +9,7 @@
  */
 angular.module('appApp')
   .controller('NewsnippetCtrl', function ($scope, snippetFactory) {
-    $scope.code = "alert('hello world');";
+    $scope.code = "";
     function createSnippet() {
       //write put request to database factory
       snippetFactory.post($scope.newSnippet)

@@ -2,12 +2,12 @@
     <div class="col-sm-12">
         <div class="card card-pad">
             <div class="card-heading">
-                <h2>{{fullSnippet.title}}</h2>
+                <h2>{{snippet.title}}</h2>
             </div>
             <div>
-                <div class="editor" ui-ace="{  showGutter: 'true', theme: 'chrome', onLoad: aceLoaded, onChange: aceChanged }" ng-model="fullSnippet.code"></div>
+                <div class="editor" ui-ace="{ mode:snippet.language}" ng-model="snippet.code"></div>
 
-                <button type="button" class="btn" ng-data-click="editSnippet()">Save Post</button>
+                <button type="button" class="btn" ng-click="updateSnippet()">Save Post</button>
             </div>
         </div>
     </div>

@@ -61,7 +61,7 @@ angular.module('appApp')
       //query the database using the factory with inserted id
       ipaddressFactory.get(id)
         .success(function (response) {
-          //set the scope from the response
+          //set the scope from the response - to be inserted into the modal placeholders
           $scope.editAddress = response;
           //actually open the modal, inserting the data from the DB in the DB callback
           var modalInstance = $uibModal.open({

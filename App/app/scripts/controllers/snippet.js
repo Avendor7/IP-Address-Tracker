@@ -8,31 +8,25 @@
  * Controller of the appApp
  */
 angular.module('appApp')
-    .controller('SnippetCtrl', function($scope, snippetFactory, $stateParams) {
+    .controller('SnippetCtrl', function ($scope, snippetFactory, $stateParams) {
+        //get current snippet ID from URL
         var currentId = $stateParams.id;
+        //query the database for the snippet data
         snippetFactory.get(currentId)
-            .success(function(response) {
-                var fullSnippet = response;
-                $scope.fullSnippet = fullSnippet;
+            .success(function (response) {
+                //on success, load the editor and the snippet into the editor
+                $scope.snippet = response;
 
-                $scope.aceLoaded = function(_editor) {
-                    // Options
-                    _editor.setReadOnly(true);
-                    // _editor.mode(fullSnippet.language);
-                    //_editor.mode('python');
-
-                };
-                $scope.aceChanged = function(e) {
-                    //
-                };
-                function updateSnippet() {
+                
+                //when save button is pressed
+                $scope.updateSnippet = function () {
                     //write put request to database factory
-                    snippetFactory.put($scope.fullSnippet)
-                        .success(function() {
+                    snippetFactory.put($scope.snippet)
+                        .success(function () {
                             //TODO: have factory return the id so $state can be redirected
                             console.log("It Worked... finally");
                         })
-                        .error(function(response, status) {
+                        .error(function (response, status) {
                             switch (status) {
                                 case 404:
                                     console.log('404 server not found');
@@ -42,9 +36,11 @@ angular.module('appApp')
                                     break;
                             }
                         });
-                }
+                };
+
+
             })
-            .error(function(response, status) {
+            .error(function (response, status) {
                 switch (status) {
                     case 404:
                         console.log('404 server not found');
@@ -54,5 +50,7 @@ angular.module('appApp')
                         break;
                 }
             });
+
+
 
     });
