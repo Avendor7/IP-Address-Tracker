@@ -27,7 +27,7 @@ angular.module('appApp')
                 };
                 function updateSnippet() {
                     //write put request to database factory
-                    snippetFactory.post($scope.fullSnippet)
+                    snippetFactory.put($scope.fullSnippet)
                         .success(function() {
                             //TODO: have factory return the id so $state can be redirected
                             console.log("It Worked... finally");
