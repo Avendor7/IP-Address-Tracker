@@ -12,7 +12,7 @@ angular
     .module('appApp', [
         'ui.router',
          'ui.bootstrap',
-         'textAngular',
+         'angularTrix',
          'ui.ace'
          
     ])
