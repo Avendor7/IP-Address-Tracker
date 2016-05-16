@@ -5,9 +5,10 @@
                 <h2>{{snippet.title}}</h2>
             </div>
             <div>
-                <div class="editor" ui-ace="{ mode:snippet.language}" ng-model="snippet.code"></div>
+                <div class="editor" ui-ace="{ mode:snippet.language, setShowPrintMargin:'false'}" ng-model="snippet.code"></div>
 
-                <button type="button" class="btn" ng-click="updateSnippet()">Save Post</button>
+                <button type="button" class="btn pull-left" ng-click="updateSnippet()">Save Snippet</button>
+                <button type="button" class="btn pull-right" ng-click="deleteSnippet()">Delete Snippet</button>
             </div>
         </div>
     </div>
