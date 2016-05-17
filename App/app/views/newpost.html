@@ -5,8 +5,11 @@
                 <h2>New Blog Post</h2>
             </div>
             <div class="col-sm-12">
-                <trix-editor angular-trix ng-model="foo"></trix-editor>
-                <input type="text" class="form-control" placeholder="new title" data-ng-model="newPost.title">
+                <input type="text" class="form-control" placeholder="Title" data-ng-model="newPost.title">
+                <input type="text" class="form-control" placeholder="Description" data-ng-model="newPost.title">
+                <label>HTML Text</label>
+                
+                <trix-editor angular-trix ng-model="newPostHTML"></trix-editor>
                 <button type="button" class="btn" ng-data-click="makePost()">Save Post</button>
             </div>
         </div>
