@@ -64,12 +64,12 @@ p {
         color:$linkColour;
     }
 }
-.card {
+.jumbotron {
 	background-color: $color_log_cabin_approx;
 	color: $alabaster;
 	font-size: 12pt;
     padding: 10px;
-	.card-heading {
+	.jumbotron-heading {
 		background-color: $color_gossamer_approx;
 		color: $white_84;
         padding:5px;
@@ -89,11 +89,11 @@ p {
 	}
 	
 }
-.card-white {
+.jumbotron-white {
 		background-color: $color_gallery_approx;
 		color: $black;
 }
-.card-pad {
+.jumbotron-pad {
 	margin-top: 60px;
 }
 .fixed-card {
@@ -147,3 +147,4 @@ img.login-logo {
 	height: 500px;
 	margin: 20px;
 }
+

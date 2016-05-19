@@ -35,8 +35,6 @@ module.exports = function(config) {
       'bower_components/ng-dialog/js/ngDialog.js',
       'bower_components/angular-bootstrap/ui-bootstrap-tpls.js',
       'bower_components/bootstrap-sass/assets/javascripts/bootstrap.js',
-      'bower_components/bootstrap-material-design/dist/js/material.js',
-      'bower_components/bootstrap-material-design/dist/js/ripples.js',
       'bower_components/angular-ui-ace/ui-ace.js',
       'bower_components/async/lib/async.js',
       'bower_components/trix/dist/trix.js',
