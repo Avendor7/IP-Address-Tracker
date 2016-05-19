@@ -47,6 +47,9 @@ p {
 }
 .navbar {
 	background-color: $color_log_cabin_approx;
+	a {
+		color: $white_84; 
+	}
 }
 .footer {
 	left: 0;
@@ -64,12 +67,12 @@ p {
         color:$linkColour;
     }
 }
-.jumbotron {
+.panel {
 	background-color: $color_log_cabin_approx;
 	color: $alabaster;
 	font-size: 12pt;
     padding: 10px;
-	.jumbotron-heading {
+	.panel-heading {
 		background-color: $color_gossamer_approx;
 		color: $white_84;
         padding:5px;
@@ -89,11 +92,11 @@ p {
 	}
 	
 }
-.jumbotron-white {
+.panel-white {
 		background-color: $color_gallery_approx;
 		color: $black;
 }
-.jumbotron-pad {
+.panel-pad {
 	margin-top: 60px;
 }
 .fixed-card {
@@ -109,10 +112,10 @@ p {
 .margin-bottom-15 {
 	margin-bottom: 100px;
 }
-.btn {
-	background-color: $color_gossamer_approx;
-	color: $white;
-}
+// .btn {
+// 	background-color: $color_gossamer_approx;
+// 	color: $white;
+// }
 hr {
 	background-color: $color_gossamer_approx;
 }

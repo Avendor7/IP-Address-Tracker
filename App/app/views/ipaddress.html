@@ -20,14 +20,14 @@
           <td>{{ x.operatingSystem }}</td>
           <td>{{ x.description }}</td>
           <td>
-            <button type="button" class="btn btn-default" ng-click="openEdit(x.id)">Edit</button>
-            <button type="button" class="btn btn-lg" ng-click="deleteAddress(x.id)">Delete</button>
+            <button type="button" class="btn btn-primary" ng-click="openEdit(x.id)">Edit</button>
+            <button type="button" class="btn btn-danger" ng-click="deleteAddress(x.id)">Delete</button>
           </td>
         </tr>
       </tbody>
     </table>
   </div>
-  <button type="button" class="btn btn-default" ng-click="openNew()">Add New Address</button>
+  <button type="button" class="btn btn-primary" ng-click="openNew()">Add New Address</button>
 </div>
 
 <!--edit modal-->
@@ -38,36 +38,49 @@
       <h4 class="modal-title">Edit IP Address</h4>
     </div>
     <div class="modal-body">
-      <form>
-        <div class="form-group">
-          <span class="label label-default control-label">Hostname</span>
-          <input type="text" class="form-control" placeholder="{{ ipaddressData.hostname }}" data-ng-model="ipaddressData.hostname">
-        </div>
-        <div class="form-group">
-          <span class="label label-default control-label">IP Address</span>
-          <input type="text" class="form-control" placeholder="{{ ipaddressData.ipv4 }}" data-ng-model="ipaddressData.ipv4">
-        </div>
-        <div class="form-group">
-          <span class="label label-default control-label">VM</span>
-          <input type="checkbox" class="form-control" placeholder="{{ ipaddressData.VM }}" data-ng-model="ipaddressData.VM">
-        </div>
-        <div class="form-group">
-          <span class="label label-default control-label">Operating System</span>
-          <input type="text" class="form-control" placeholder="{{ ipaddressData.operatingSystem }}" data-ng-model="ipaddressData.OS">
-        </div>
-        <div class="form-group">
-          <span class="label label-default control-label">Description</span>
-          <input type="text" class="form-control" placeholder="{{ ipaddressData.description }}" data-ng-model="ipaddressData.description">
-        </div>
-        <div class="form-group">
-          <input type="hidden" data-ng-model="ipaddressData.id">
-        </div>
+      <form class="form-horizontal">
+        <fieldset>
+          <div class="form-group">
+            <label class="col-lg-3 control-label">Hostname</label>
+            <div class="col-lg-9">
+              <input type="text" class="form-control" placeholder="{{ ipaddressData.hostname }}" data-ng-model="ipaddressData.hostname">
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-lg-3 control-label">IP Address</label>
+            <div class="col-lg-9">
+              <input type="text" class="form-control" placeholder="{{ ipaddressData.ipv4 }}" data-ng-model="ipaddressData.ipv4">
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-lg-3 control-label">Operating System</label>
+            <div class="col-lg-9">
+              <input type="text" class="form-control" placeholder="{{ ipaddressData.operatingSystem }}" data-ng-model="ipaddressData.operatingSystem">
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-lg-3 control-label">Description</label>
+            <div class="col-lg-9">
+              <input type="text" class="form-control" placeholder="{{ ipaddressData.description }}" data-ng-model="ipaddressData.description">
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="col-lg-offset-3 col-lg-9">
+              <div class="checkbox">
+                <label><input type="checkbox" placeholder="{{ ipaddressData.VM }}" data-ng-model="ipaddressData.VM"> Virtual Machine</label>
+              </div>
+            </div>
+          </div>
+          <div>
+            <input type="hidden" data-ng-model="ipaddressData.id">
+          </div>
+        </fieldset>
       </form>
     </div>
 
     <div class="modal-footer">
       <button class="btn btn-primary" type="submit" data-ng-click="ok()">OK</button>
-      <button class="btn btn-warning" type="button" ng-click="cancel()">Cancel</button>
+      <button class="btn btn-danger" type="button" ng-click="cancel()">Cancel</button>
     </div>
 </script>
 
@@ -80,106 +93,45 @@
       <h4 class="modal-title">New IP Address</h4>
     </div>
     <div class="modal-body">
-      <form>
-        <div class="form-group">
-          <span class="label label-default control-label">Hostname</span>
-          <input type="text" class="form-control" data-ng-model="ipaddressData.hostname">
-        </div>
-        <div class="form-group">
-          <span class="label label-default control-label">IP Address</span>
-          <input type="text" class="form-control" data-ng-model="ipaddressData.ipv4">
-        </div>
-        <div class="form-group">
-          <span class="label label-default control-label">VM</span>
-          <input type="checkbox" class="form-control" data-ng-model="ipaddressData.VM">
-        </div>
-        <div class="form-group">
-          <span class="label label-default control-label">Operating System</span>
-          <input type="text" class="form-control" data-ng-model="ipaddressData.operatingSystem">
-        </div>
-        <div class="form-group">
-          <span class="label label-default control-label">Description</span>
-          <input type="text" class="form-control" data-ng-model="ipaddressData.description">
-        </div>
+      <form class="form-horizontal">
+        <fieldset>
+          <div class="form-group">
+            <label class="col-lg-3 control-label">Hostname</label>
+            <div class="col-lg-9">
+              <input type="text" class="form-control" data-ng-model="ipaddressData.hostname">
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-lg-3 control-label">IP Address</label>
+            <div class="col-lg-9">
+              <input type="text" class="form-control" data-ng-model="ipaddressData.ipv4">
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-lg-3 control-label">Operating System</label>
+            <div class="col-lg-9">
+              <input type="text" class="form-control" data-ng-model="ipaddressData.operatingSystem">
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-lg-3 control-label">Description</label>
+            <div class="col-lg-9">
+              <input type="text" class="form-control" data-ng-model="ipaddressData.description">
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="col-lg-offset-3 col-lg-9">
+              <div class="checkbox">
+                <label><input type="checkbox" data-ng-model="ipaddressData.VM"> Virtual Machine</label>
+              </div>
+            </div>
+          </div>
+        </fieldset>
       </form>
     </div>
 
     <div class="modal-footer">
       <button class="btn btn-primary" type="submit" data-ng-click="ok()">OK</button>
-      <button class="btn btn-warning" type="button" ng-click="cancel()">Cancel</button>
+      <button class="btn btn-danger" type="button" ng-click="cancel()">Cancel</button>
     </div>
 </script>
-<div class="well">
-  <form class="form-horizontal">
-    <fieldset>
-      <legend>Legend</legend>
-      <div class="form-group">
-        <label for="inputEmail" class="col-lg-2 control-label">Email</label>
-        <div class="col-lg-10">
-          <input type="text" class="form-control" id="inputEmail" placeholder="Email">
-        </div>
-      </div>
-      <div class="form-group">
-        <label for="inputPassword" class="col-lg-2 control-label">Password</label>
-        <div class="col-lg-10">
-          <input type="password" class="form-control" id="inputPassword" placeholder="Password">
-          <div class="checkbox">
-            <label>
-            <input type="checkbox"> Checkbox
-          </label>
-          </div>
-        </div>
-      </div>
-      <div class="form-group">
-        <label for="textArea" class="col-lg-2 control-label">Textarea</label>
-        <div class="col-lg-10">
-          <textarea class="form-control" rows="3" id="textArea"></textarea>
-          <span class="help-block">A longer block of help text that breaks onto a new line and may extend beyond one line.</span>
-        </div>
-      </div>
-      <div class="form-group">
-        <label class="col-lg-2 control-label">Radios</label>
-        <div class="col-lg-10">
-          <div class="radio">
-            <label>
-            <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked="">
-            Option one is this
-          </label>
-          </div>
-          <div class="radio">
-            <label>
-            <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
-            Option two can be something else
-          </label>
-          </div>
-        </div>
-      </div>
-      <div class="form-group">
-        <label for="select" class="col-lg-2 control-label">Selects</label>
-        <div class="col-lg-10">
-          <select class="form-control" id="select">
-          <option>1</option>
-          <option>2</option>
-          <option>3</option>
-          <option>4</option>
-          <option>5</option>
-        </select>
-          <br>
-          <select multiple="" class="form-control">
-          <option>1</option>
-          <option>2</option>
-          <option>3</option>
-          <option>4</option>
-          <option>5</option>
-        </select>
-        </div>
-      </div>
-      <div class="form-group">
-        <div class="col-lg-10 col-lg-offset-2">
-          <button type="reset" class="btn btn-default">Cancel</button>
-          <button type="submit" class="btn btn-primary">Submit</button>
-        </div>
-      </div>
-    </fieldset>
-  </form>
-</div>
