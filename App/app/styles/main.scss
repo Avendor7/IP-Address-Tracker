@@ -10,7 +10,6 @@ $alabaster: #fafafa;
 $color_gossamer_approx: #007796;
 $white_84: rgba(255, 255, 255, 0.84);
 $white: white;
-$linkColour:#337ab7;
 
 //fonts
 $font_0: Ubuntu;
@@ -23,7 +22,7 @@ $font_1: sans-serif;
 	padding: 0.2em 0;
 }
 html {
-	overflow-y: scroll;
+	overflow-y: auto;
 }
 body {
 	padding-top: 70px;
@@ -64,7 +63,7 @@ p {
 		margin: 15px;
 	}
     a{
-        color:$linkColour;
+        color:$white_84;
     }
 }
 .panel {
