@@ -5,11 +5,10 @@ $red: #ff0000;
 $black: #000;
 $color_limed_spruce_approx: #374755;
 $color_log_cabin_approx: #212121;
-$color_gallery_approx: #eee;
 $alabaster: #fafafa;
-$color_gossamer_approx: #007796;
+$primary: #007796;
+$danger: #961F00;
 $white_84: rgba(255, 255, 255, 0.84);
-$white: white;
 
 //fonts
 $font_0: Ubuntu;
@@ -49,13 +48,25 @@ p {
 	a {
 		color: $white_84; 
 	}
+	a:hover { 
+    	background-color: $color_limed_spruce_approx;
+	}
+	ul.nav a:hover{
+		background-color: $color_log_cabin_approx;
+		background-color: $color_limed_spruce_approx;
+	}
+	ul.nav active{
+		background-color: $color_log_cabin_approx;
+		background-color: $color_limed_spruce_approx;
+	}
 }
+
 .footer {
 	left: 0;
 	bottom: 0;
 	height: 50px;
 	width: 100%;
-	color: $color_gallery_approx;
+	color: $primary;
 	font-size: 16px;
 	background-color: $color_log_cabin_approx;
 	position: fixed;
@@ -72,7 +83,7 @@ p {
 	font-size: 12pt;
     padding: 10px;
 	.panel-heading {
-		background-color: $color_gossamer_approx;
+		background-color: $primary;
 		color: $white_84;
         padding:5px;
         margin-top: -20px;
@@ -92,7 +103,7 @@ p {
 	
 }
 .panel-white {
-		background-color: $color_gallery_approx;
+		background-color: $primary;
 		color: $black;
 }
 .panel-pad {
@@ -111,12 +122,16 @@ p {
 .margin-bottom-15 {
 	margin-bottom: 100px;
 }
-// .btn {
-// 	background-color: $color_gossamer_approx;
-// 	color: $white;
-// }
+.btn-primary {
+	background-color: $primary;
+	color: $white_84;
+}
+.btn-danger {
+	background-color: $danger;
+	color: $white_84;
+}
 hr {
-	background-color: $color_gossamer_approx;
+	background-color: $primary;
 }
 
 img.login-logo {
@@ -149,4 +164,3 @@ img.login-logo {
 	height: 500px;
 	margin: 20px;
 }
-
