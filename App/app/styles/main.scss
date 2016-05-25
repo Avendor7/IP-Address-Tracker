@@ -9,6 +9,8 @@ $alabaster: #fafafa;
 $primary: #007796;
 $danger: #961F00;
 $white_84: rgba(255, 255, 255, 0.84);
+$white: #FFF;
+$black: #000;
 
 //fonts
 $font_0: Ubuntu;
@@ -106,8 +108,8 @@ p {
 	
 }
 .panel-white {
-		background-color: $primary;
-		color: $black;
+		background-color: $white;
+		color: black;
 }
 .panel-pad {
 	margin-top: 60px;
