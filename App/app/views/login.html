@@ -1,42 +1,39 @@
 <div class="container-fluid">
     <div class="row">
         <div class="login-card">
-            <div class="panel panel-pad mdc-bg-grey-900 mdc-text-grey-50">
-                <div class="panel-body">
-                    <div class="row text-center">
-                        <img class="img-responsive login-logo" src="images/bacon.jpg" alt="Bin/Bash" />
+            <section class="row">
+                <div class="col-sm-12">
+
+                    <div class="panel panel-pad panel-white">
+                        <form id="login-form" name="loginForm">
+                            <div class="panel-heading">
+                                <div class="row text-center">
+                                    <h4>User Login</h4>
+                                </div>
+                            </div>
+
+                            <!--TODO check for form validation-->
+                            <div class="form-group padding-top">
+                                <span class="control-label col-lg-3">Email</span>
+                                <div class="col-lg-9">
+                                    <input type="text" class="form-control" placeholder="Email" ng-model="user.email">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <span class="control-label col-lg-3">Password</span>
+                                <div class="col-lg-9">
+
+                                    <input type="password" class="form-control" placeholder="Password" ng-model="user.password">
+                                </div>
+                            </div>
+
+                            <div class="padding-top">
+                                <input type="submit" class="btn btn-lg btn-primary btn-block" ng-click="loginNow()" value="Login" />
+                            </div>
+                        </form>
                     </div>
-                    <section class="row" >
-                        <div class="col-sm-12">
-                            <form id="login-form" name="loginForm">
-                                <div class="panel ">
-                                    <div class="panel-heading">
-                                        <div class="row text-center">
-                                            <h4>User Login</h4>
-                                        </div>
-                                    </div>
-                                    <div class="panel panel-white">
-
-                                        <!--TODO check for form validation-->
-                                        <div class="form-group">
-                                            <span class="label label-default control-label">Email</span>
-                                            <input type="text" class="form-control" placeholder="Email" ng-model="user.email">
-                                        </div>
-                                        <div class="form-group">
-                                            <span class="label label-default control-label">Password</span>
-                                            <input type="password" class="form-control" placeholder="Password" ng-model="user.password">
-                                        </div>
-
-                                    </div>
-                                </div>
-                                <div>
-                                    <input type="submit" class="btn btn-lg btn-primary btn-block" ng-click="loginNow()" value="Login" />
-                                </div>
-                            </form>
-                        </div>
-                    </section>
                 </div>
-            </div>
+            </section>
         </div>
     </div>
 </div>
