@@ -6,18 +6,18 @@
             </div>
             <div class="topbottomPadding">
                 <input type="text" class="form-control" placeholder="Title" data-ng-model="newPost.title" required>
-                <input type="text" class="form-control" placeholder="Description" data-ng-model="newPost.title" required>
+                <input type="text" class="form-control" placeholder="Description" data-ng-model="newPost.description" required>
                 <br>
                 <label>HTML Text</label>
                 
-                <trix-editor angular-trix ng-model="newPostHTML"></trix-editor>
+                <trix-editor angular-trix data-ng-model="newPost.post"></trix-editor>
                 <br>
-                <button type="button" class="btn btn-primary" ng-data-click="makePost()">Save Post</button>
+                <button type="button" class="btn btn-primary" ng-click="makePost()">Save Post</button>
             </div>
         </div>
         
         <div style="background-color:white;">
-            {{newPostHTML}}
+            {{newPost.post}}
         </div>
         <div>
             

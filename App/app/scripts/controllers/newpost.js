@@ -10,7 +10,8 @@
 angular.module('appApp')
   .controller('NewpostCtrl', function ($scope, blogFactory) {
     
-    function makePost() {
+    $scope.makePost = function () {
+      console.log($scope.newPost);
       //write put request to database factory
       blogFactory.post($scope.newPost)
         .success(function () {
