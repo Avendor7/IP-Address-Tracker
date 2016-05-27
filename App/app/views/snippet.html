@@ -1,14 +1,14 @@
 <div class="container-fluid margin-bottom-15">
     <div class="col-sm-12">
-        <div class="card card-pad">
-            <div class="card-heading">
+        <div class="panel panel-pad panel-white">
+            <div class="panel-heading">
                 <h2>{{snippet.title}}</h2>
             </div>
-            <div>
-                <div class="editor" ui-ace="{ mode:snippet.language, setShowPrintMargin:'false'}" ng-model="snippet.code"></div>
+            <div class="panel-body">
+                <div class="editor border" ui-ace="{ mode:snippet.language, setShowPrintMargin:'false'}" ng-model="snippet.code"></div>
 
-                <button type="button" class="btn pull-left" ng-click="updateSnippet()">Save Snippet</button>
-                <button type="button" class="btn pull-right" ng-click="deleteSnippet()">Delete Snippet</button>
+                <button type="button" class="btn btn-primary pull-left" ng-click="updateSnippet()">Save Snippet</button>
+                <button type="button" class="btn btn-danger pull-right" ng-click="deleteSnippet()">Delete Snippet</button>
             </div>
         </div>
     </div>
