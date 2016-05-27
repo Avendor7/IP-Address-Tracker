@@ -1,39 +1,17 @@
 <div class="container-fluid">
     <div class="row">
-        <div class="login-card">
-            <section class="row">
-                <div class="col-sm-12">
+        <div class="col-sm-6 col-md-4 col-md-offset-4">
+           <div class="account-wall">
+                <img class="profile-img" src="https://lh5.googleusercontent.com/-b0-k99FZlyE/AAAAAAAAAAI/AAAAAAAAAAA/eu7opA4byxI/photo.jpg?sz=120"
+                    alt="">
+                <form class="form-signin">
+                    <input type="text" class="form-control" placeholder="Email" ng-model="user.email" required autofocus>
+                    <input type="password" class="form-control" placeholder="Password" ng-model="user.password" required>
 
-                    <div class="panel panel-pad panel-white">
-                        <form id="login-form" name="loginForm">
-                            <div class="panel-heading">
-                                <div class="row text-center">
-                                    <h4>User Login</h4>
-                                </div>
-                            </div>
-
-                            <!--TODO check for form validation-->
-                            <div class="form-group padding-top">
-                                <span class="control-label col-lg-3">Email</span>
-                                <div class="col-lg-9">
-                                    <input type="text" class="form-control" placeholder="Email" ng-model="user.email">
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <span class="control-label col-lg-3">Password</span>
-                                <div class="col-lg-9">
-
-                                    <input type="password" class="form-control" placeholder="Password" ng-model="user.password">
-                                </div>
-                            </div>
-
-                            <div class="padding-top">
-                                <input type="submit" class="btn btn-lg btn-primary btn-block" ng-click="loginNow()" value="Login" />
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </section>
+                    <input type="submit" class="btn btn-lg btn-primary btn-block" ng-click="loginNow()" value="Login" />
+                    
+                </form>
+            </div>
         </div>
     </div>
 </div>
