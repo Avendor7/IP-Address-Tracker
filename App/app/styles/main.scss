@@ -6,7 +6,8 @@ $black: #000;
 $color_limed_spruce_approx: #374755;
 $color_log_cabin_approx: #212121;
 $alabaster: #fafafa;
-$primary: #007796;
+//$primary: #007796;
+$primary: #006b87;
 $danger: #961F00;
 $white_84: rgba(255, 255, 255, 0.84);
 $white: #FFF;
@@ -83,8 +84,8 @@ p {
     }
 }
 .panel {
-	background-color: $color_log_cabin_approx;
-	color: $alabaster;
+	background-color: $white_84;
+	color: $black;
 	font-size: 12pt;
     padding: 10px;
 	.panel-heading {
@@ -106,9 +107,9 @@ p {
         }
 	}
 }
-.panel-white {
-		background-color: $white_84;
-		color: black;
+.panel-black {
+		background-color: $color_log_cabin_approx;
+		color: $alabaster;
 }
 .panel-pad {
 	margin-top: 60px;
@@ -146,7 +147,9 @@ img.login-logo {
 	height: 200px;
 	width: 400px;
 }
-
+.img-thumbnail{
+	background-color: $black;
+}
 .no-bullets {
      margin-left:0;
      padding-left:0;
