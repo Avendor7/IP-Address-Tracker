@@ -5,10 +5,8 @@
                 <h2>New Snippet</h2>
             </div>
             <div class="panel-body">
-                
+                <input class= "input" type="text" placeholder="Title" ng-model="snippet.title" required>
                 <div class="editor border" ui-ace="{ mode:snippet.language, setShowPrintMargin:'false'}" ng-model="snippet.code"></div>
-                <div><input class= "input" type="text" ng-model="snippet.title" required autofocus></div>
-                <br>
                 <button type="button" class="btn btn-primary pull-left" ng-click="updateSnippet()">Save Snippet</button>
                 <button type="button" class="btn btn-danger pull-right" ng-click="deleteSnippet()">Delete Snippet</button>
             </div>
