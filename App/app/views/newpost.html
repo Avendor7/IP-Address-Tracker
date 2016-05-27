@@ -1,16 +1,18 @@
 <div class="container-fluid margin-bottom-15">
     <div class="col-sm-12">
-        <div class="card card-pad card-white">
-            <div class="card-heading">
+        <div class="panel panel-pad">
+            <div class="panel-heading">
                 <h2>New Blog Post</h2>
             </div>
-            <div class="col-sm-12">
-                <input type="text" class="form-control" placeholder="Title" data-ng-model="newPost.title">
-                <input type="text" class="form-control" placeholder="Description" data-ng-model="newPost.title">
+            <div class="topbottomPadding">
+                <input type="text" class="form-control" placeholder="Title" data-ng-model="newPost.title" required>
+                <input type="text" class="form-control" placeholder="Description" data-ng-model="newPost.title" required>
+                <br>
                 <label>HTML Text</label>
                 
                 <trix-editor angular-trix ng-model="newPostHTML"></trix-editor>
-                <button type="button" class="btn btn-warning" ng-data-click="makePost()">Save Post</button>
+                <br>
+                <button type="button" class="btn btn-primary" ng-data-click="makePost()">Save Post</button>
             </div>
         </div>
         
