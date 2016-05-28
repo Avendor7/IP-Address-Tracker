@@ -1,13 +1,17 @@
 <div ng-repeat="x in allSnippets">
     <div class="container-fluid margin-bottom-15">
         <div class="col-sm-12">
-            <div class="card card-pad">
-                <div class="card-heading">
+            <div class="panel panel-pad panel-body">
+                <div class="panel-heading">
                     <h2>{{x.title}}</h2>
                 </div>
-                <div class="col-sm-12" ng-bind-html="x.description">
+                <div class="col-lg-12">
+                    <span>{{x.createdAt | date:"'Created at: 'LLLL M, yyyy 'at' h:mma"}} | {{x.updatedAt | date:"'Updated at: 'LLLL M, yyyy 'at' h:mma"}} | Language: {{x.language}}</span>
+                    <hr>
+                    <p>{{x.description}}</p>
+                    <hr>
+                    <a ui-sref="user.snippet({ id: x.id })">View Snippet</a>
                 </div>
-                <a ui-sref="user.snippet({ id: x.id })">View Snippet</a>
             </div>
         </div>
     </div>
