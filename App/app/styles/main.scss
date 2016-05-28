@@ -34,6 +34,9 @@ body {
 p {
 	font-size: 16px;
 }
+h1{
+	color: $white;
+}
 .header {
 	position: absolute;
 	width: 100%;
@@ -90,7 +93,7 @@ p {
     padding: 10px;
 	.panel-heading {
 		background-color: $primary;
-		color: $white_84;
+		color: $white;
         padding:5px;
         margin-top: -20px;
         margin-left: -15px;
@@ -157,7 +160,6 @@ img.login-logo {
 	li{
         list-style: none;
     }
-    
 }
 .topbottomPadding{
     padding-top:15px;
