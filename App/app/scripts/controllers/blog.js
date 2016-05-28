@@ -9,9 +9,14 @@
  */
 angular.module('appApp')
   .controller('BlogCtrl', function ($scope, blogFactory) {
+    
+    
      blogFactory.getAll()
       .success(function (response) {
+        
        $scope.allPosts  = response;
+       
+       
       })
       .error(function (response, status) {
         switch (status) {

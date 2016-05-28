@@ -1,12 +1,17 @@
 <div ng-repeat="x in allPosts">
     <div class="container-fluid margin-bottom-15">
         <div class="col-sm-12">
-            <div class="panel panel-pad">
+            <div class="panel panel-pad panel-body">
                 <div class="panel-heading">
                     <h2>{{x.title}}</h2>
                 </div>
-                <p>{{x.description}}</p>
-                <a ui-sref="anon.post({ id: x.id })">View Post</a>
+                <div class="col-lg-12">
+                    <span>{{x.createdAt | date:"'Created at: 'LLLL M, yyyy 'at' h:mma"}} | {{x.updatedAt | date:"'Updated at: 'LLLL M, yyyy 'at' h:mma"}}</span>
+                    <hr>
+                    <p>{{x.description}}</p>
+                    <hr>
+                    <a ui-sref="anon.post({ id: x.id })">View Post</a>
+                </div>
             </div>
         </div>
     </div>

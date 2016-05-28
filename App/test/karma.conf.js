@@ -39,6 +39,7 @@ module.exports = function(config) {
       'bower_components/async/lib/async.js',
       'bower_components/trix/dist/trix.js',
       'bower_components/angular-trix/dist/angular-trix.js',
+      'bower_components/moment/moment.js',
       'bower_components/angular-mocks/angular-mocks.js',
       // endbower
       "app/scripts/**/*.js",
