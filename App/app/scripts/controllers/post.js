@@ -8,7 +8,7 @@
  * Controller of the appApp
  */
 angular.module('appApp')
-  .controller('PostCtrl', function ($scope, blogFactory, $stateParams) {
+  .controller('PostCtrl', function ($scope, blogFactory, $stateParams, $sce) {
     
     var currentId = $stateParams.id;
     
@@ -16,7 +16,6 @@ angular.module('appApp')
       .success(function (response) {
         var fullPost = response;
         $scope.fullPost = fullPost;
-        console.log($scope.fullPost);
       })
       .error(function (response, status) {
         switch (status) {
