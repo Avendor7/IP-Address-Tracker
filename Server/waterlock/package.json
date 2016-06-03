@@ -1,0 +1,120 @@
+{
+  "_args": [
+    [
+      "waterlock",
+      "/home/stephen/Documents/angular-sails/Server"
+    ]
+  ],
+  "_from": "waterlock@latest",
+  "_id": "waterlock@0.1.2-rc1",
+  "_inCache": true,
+  "_installable": true,
+  "_location": "/waterlock",
+  "_npmUser": {
+    "email": "wayne+npm@sonatribe.com",
+    "name": "wayne-o"
+  },
+  "_npmVersion": "1.4.28",
+  "_phantomChildren": {
+    "graceful-readlink": "1.0.1"
+  },
+  "_requested": {
+    "name": "waterlock",
+    "raw": "waterlock",
+    "rawSpec": "",
+    "scope": null,
+    "spec": "latest",
+    "type": "tag"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/waterlock/-/waterlock-0.1.2-rc1.tgz",
+  "_shasum": "1955ac155ea1f51075b32c2f6df28e915f23cf66",
+  "_shrinkwrap": null,
+  "_spec": "waterlock",
+  "_where": "/home/stephen/Documents/angular-sails/Server",
+  "author": {
+    "email": "david.r.rivera193@gmail.com",
+    "name": "David Rivera"
+  },
+  "bin": {
+    "waterlock": "./bin/waterlock.js"
+  },
+  "bugs": {
+    "url": "https://github.com/waterlock/waterlock/issues"
+  },
+  "contributors": [
+    {
+      "email": "david.r.rivera193@gmail.com",
+      "name": "David Rivera"
+    }
+  ],
+  "dependencies": {
+    "commander": "~2.8.1",
+    "jwt-simple": "~0.3.0",
+    "lodash": "~3.8.0",
+    "moment": "~2.10.3",
+    "node-uuid": "~1.4.3",
+    "winston": "~1.0.0"
+  },
+  "description": "User authentication and Json Web Tokens for Sails",
+  "devDependencies": {
+    "coveralls": "*",
+    "istanbul": "*",
+    "jshint": "*",
+    "mocha": "*",
+    "proxyquire": "*",
+    "sails": "*",
+    "should": "*"
+  },
+  "directories": {},
+  "dist": {
+    "shasum": "1955ac155ea1f51075b32c2f6df28e915f23cf66",
+    "tarball": "http://registry.npmjs.org/waterlock/-/waterlock-0.1.2-rc1.tgz"
+  },
+  "engines": {
+    "node": ">=0.10"
+  },
+  "gitHead": "720760e9894f5d5a3d2b33c5f3264baa4066e78b",
+  "homepage": "http://waterlock.ninja/",
+  "keywords": [
+    "waterlock",
+    "sails",
+    "authentication",
+    "json web tokens",
+    "jwt"
+  ],
+  "license": "MIT",
+  "maintainers": [
+    {
+      "email": "David.R.Rivera193@gmail.com",
+      "name": "duhruh"
+    },
+    {
+      "email": "markus.padourek@gmail.com",
+      "name": "globegitter"
+    },
+    {
+      "email": "kris@kris.net",
+      "name": "kriswill"
+    },
+    {
+      "email": "wayne@soantribe.com",
+      "name": "wayne-o"
+    }
+  ],
+  "name": "waterlock",
+  "optionalDependencies": {},
+  "preferGlobal": false,
+  "readme": "ERROR: No README data found!",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/waterlock/waterlock.git"
+  },
+  "scripts": {
+    "test": "make test"
+  },
+  "version": "0.1.2-rc1"
+}

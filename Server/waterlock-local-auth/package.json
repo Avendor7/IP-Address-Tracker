@@ -1,0 +1,114 @@
+{
+  "_args": [
+    [
+      "waterlock-local-auth",
+      "/home/stephen/Documents/IP-Address-Tracker/Server"
+    ]
+  ],
+  "_from": "waterlock-local-auth@latest",
+  "_id": "waterlock-local-auth@0.1.2-rc1",
+  "_inCache": true,
+  "_installable": true,
+  "_location": "/waterlock-local-auth",
+  "_npmUser": {
+    "email": "wayne+npm@sonatribe.com",
+    "name": "wayne-o"
+  },
+  "_npmVersion": "1.4.28",
+  "_phantomChildren": {},
+  "_requested": {
+    "name": "waterlock-local-auth",
+    "raw": "waterlock-local-auth",
+    "rawSpec": "",
+    "scope": null,
+    "spec": "latest",
+    "type": "tag"
+  },
+  "_requiredBy": [
+    "#USER"
+  ],
+  "_resolved": "https://registry.npmjs.org/waterlock-local-auth/-/waterlock-local-auth-0.1.2-rc1.tgz",
+  "_shasum": "a8281434440d398dd4c48cb5648f61f0643efecd",
+  "_shrinkwrap": null,
+  "_spec": "waterlock-local-auth",
+  "_where": "/home/stephen/Documents/IP-Address-Tracker/Server",
+  "author": {
+    "email": "david.r.rivera193@gmail.com",
+    "name": "David Rivera"
+  },
+  "bugs": {
+    "url": "https://github.com/davidrivera/waterlock-local-auth/issues"
+  },
+  "contributors": [
+    {
+      "email": "david.r.rivera193@gmail.com",
+      "name": "David Rivera"
+    }
+  ],
+  "dependencies": {
+    "bcrypt": "~0.8.6",
+    "jade": "~1.11.0",
+    "jwt-simple": "~0.3.0",
+    "lodash": "~3.10.0",
+    "moment": "~2.10.6",
+    "node-uuid": "~1.4.2",
+    "nodemailer": "1.4.0"
+  },
+  "description": "local authentication for waterlock",
+  "devDependencies": {
+    "coveralls": "*",
+    "istanbul": "*",
+    "jshint": "*",
+    "mocha": "*",
+    "proxyquire": "*",
+    "should": "*"
+  },
+  "directories": {},
+  "dist": {
+    "shasum": "a8281434440d398dd4c48cb5648f61f0643efecd",
+    "tarball": "http://registry.npmjs.org/waterlock-local-auth/-/waterlock-local-auth-0.1.2-rc1.tgz"
+  },
+  "engines": {
+    "node": ">=0.10"
+  },
+  "gitHead": "dc22eed01ff7aa5680defd3bd590c7caf6edee5a",
+  "homepage": "https://github.com/davidrivera/waterlock-local-auth",
+  "keywords": [
+    "waterlock",
+    "local",
+    "authentication",
+    "sails"
+  ],
+  "license": "MIT",
+  "main": "index.js",
+  "maintainers": [
+    {
+      "email": "David.R.Rivera193@gmail.com",
+      "name": "duhruh"
+    },
+    {
+      "email": "markus.padourek@gmail.com",
+      "name": "globegitter"
+    },
+    {
+      "email": "kris@kris.net",
+      "name": "kriswill"
+    },
+    {
+      "email": "wayne@soantribe.com",
+      "name": "wayne-o"
+    }
+  ],
+  "name": "waterlock-local-auth",
+  "optionalDependencies": {},
+  "preferGlobal": false,
+  "readme": "ERROR: No README data found!",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/davidrivera/waterlock-local-auth.git"
+  },
+  "scripts": {
+    "test": "make test"
+  },
+  "version": "0.1.2-rc1"
+}
