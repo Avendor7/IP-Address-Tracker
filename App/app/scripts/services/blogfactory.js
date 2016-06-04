@@ -12,11 +12,11 @@ angular.module('appApp')
       return {
    
       get: function (id) {
-        return $http.get(API_ENDPOINT+ id);
+        return $http.get('http://159.203.32.239:1337/blog/'+ id);
       },
 
       getAll: function () {
-        return $http.get(API_ENDPOINT);
+        return $http.get('http://159.203.32.239:1337/blog');
       },
       
       put: function (data) {

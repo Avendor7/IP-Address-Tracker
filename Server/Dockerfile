@@ -17,11 +17,13 @@ RUN npm install -g pm2 sails
 # Add application files
 ADD . /var/www/app/current
 
-RUN cp -r waterlock/node_modules_ waterlock/node_modules
-RUN cp -r waterlock-local-auth/node_modules_ waterlock-local-auth/node_modules
+RUN cp -r waterlock/node_modules_ node_modules
+RUN cp -r waterlock-local-auth/node_modules_ waterlock-local-auth
 
 ADD waterlock /var/www/app/current/node_modules
 ADD waterlock-local-auth /var/www/app/current/node_modules
+
+RUN npm install
 
 #Expose the port
 EXPOSE 1337
