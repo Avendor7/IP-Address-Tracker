@@ -12,5 +12,5 @@ angular.module('appApp')
   .filter('htmlTrustFilter', ['$sce', function($sce) {
     return function(htmlCode){
             return $sce.trustAsHtml(htmlCode);
-        }
+        };
   }]);

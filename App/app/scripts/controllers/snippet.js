@@ -23,7 +23,7 @@ angular.module('appApp')
                     snippetFactory.put($scope.snippet)
                         .success(function () {
                             //TODO: have factory return the id so $state can be redirected
-                            console.log("It Worked... finally");
+                            console.log('It Worked... finally');
                         })
                         .error(function (response, status) {
                             switch (status) {
@@ -43,9 +43,9 @@ angular.module('appApp')
                     snippetFactory.delete(currentId)
                         .success(function (response,status) {
                             //TODO: have factory return the id so $state can be redirected
-                            $state.go("user.viewSnippets");
+                            $state.go('user.viewSnippets');
                             console.log(status);
-                            console.log("Boom, deleted");
+                            console.log('Boom, deleted');
                         })
                         .error(function (response, status) {
                             switch (status) {

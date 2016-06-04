@@ -16,7 +16,7 @@ angular.module('appApp')
       blogFactory.post($scope.newPost)
         .success(function () {
           //TODO: have factory return the id so $state can be redirected
-          console.log("It Worked... finally");
+          console.log('It Worked... finally');
         })
         .error(function (response, status) {
           switch (status) {
@@ -28,5 +28,5 @@ angular.module('appApp')
               break;
           }
         });
-    }
+    }; 
   });

@@ -8,7 +8,7 @@
  * Controller of the appApp
  */
 angular.module('appApp')
-  .controller('PostCtrl', function ($scope, blogFactory, $stateParams, $sce) {
+  .controller('PostCtrl', function ($scope, blogFactory, $stateParams) {
     
     var currentId = $stateParams.id;
     
