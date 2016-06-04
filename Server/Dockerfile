@@ -4,7 +4,7 @@ FROM node
 ENV appDir /var/www/app/current
 
 # Set the work directory
-RUN mkdir -p /var/www/app/current/node_modules
+RUN mkdir -p /var/www/app/current
 WORKDIR ${appDir}
 
 # Add our package.json and install *before* adding our application files
@@ -16,16 +16,21 @@ RUN npm install -g pm2 sails
 # Add application files
 ADD . /var/www/app/current
 
+#remove contents of node_modules and re-create the folder
+RUN rm -rf node_modules
+RUN mkdir node_modules
 #fix for the waterlock node modules
 #use copy to rename the folder
 RUN cp -r waterlock/node_modules_ waterlock/node_modules
 RUN cp -r waterlock-local-auth/node_modules_ waterlock-local-auth/node_modules
-#remove old folder
-RUN rm -rf waterlock/node_modules_
-RUN rm -rf waterlock-local-auth/node_modules_
+
 #copy folders to node_modules
 RUN cp -r waterlock node_modules
 RUN cp -r waterlock-local-auth node_modules
+
+#remove old folder
+RUN rm -rf waterlock/node_modules_
+RUN rm -rf waterlock-local-auth/node_modules_
 
 #npm install
 RUN npm install
