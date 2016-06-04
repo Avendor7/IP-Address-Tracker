@@ -1,0 +1,1 @@
+fix node path issues, avoide nvm, use node docker image instead
