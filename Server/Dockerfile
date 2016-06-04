@@ -18,10 +18,15 @@ RUN npm install -g pm2 sails
 ADD . /var/www/app/current
 
 #fix for the waterlock node modules
+#use copy to rename the folder
 RUN cp -r waterlock/node_modules_ waterlock/node_modules
-RUN rm -rf waterlock/node_modules_
 RUN cp -r waterlock-local-auth/node_modules_ waterlock-local-auth/node_modules
+#remove old folder
+RUN rm -rf waterlock/node_modules_
 RUN rm -rf waterlock-local-auth/node_modules_
+#copy folders to node_modules
+RUN cp -r waterlock node_modules
+RUN cp -r waterlock-local-auth node_modules
 
 #npm install
 RUN npm install
