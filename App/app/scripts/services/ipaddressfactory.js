@@ -12,22 +12,22 @@ angular.module('appApp')
     return {
    
       get: function (id) {
-        return $http.get('http://localhost:1337/ipaddress/' + id);
+        return $http.get(API_ENDPOINT + '/ipaddress/' + id);
       },
 
       getAll: function () {
-        return $http.get('http://localhost:1337/ipaddress');
+        return $http.get(API_ENDPOINT + '/ipaddress/');
       },
       
       put: function (data) {
-        return $http.put('http://localhost:1337/ipAddress/' + data.id, data);
+        return $http.put(API_ENDPOINT + '/ipaddress/' + data.id, data);
       },
       
       delete: function (id) {
-        return $http.delete('http://localhost:1337/ipaddress/' + id);
+        return $http.delete(API_ENDPOINT + '/ipaddress/' + id);
       },
       post: function (data) {
-        return $http.post('http://localhost:1337/ipaddress', data);
+        return $http.post(API_ENDPOINT + '/ipaddress/', data);
       }
     };
   });

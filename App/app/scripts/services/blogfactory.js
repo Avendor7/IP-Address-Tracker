@@ -12,22 +12,22 @@ angular.module('appApp')
       return {
    
       get: function (id) {
-        return $http.get('http://159.203.32.239:1337/blog/'+ id);
+        return $http.get(API_ENDPOINT+ id);
       },
 
       getAll: function () {
-        return $http.get('http://159.203.32.239:1337/blog');
+        return $http.get(API_ENDPOINT + '/blog');
       },
       
       put: function (data) {
-        return $http.put('http://localhost:1337/blog/' + data.id, data);
+        return $http.put(API_ENDPOINT + '/blog/' + data.id, data);
       },
       
       delete: function (id) {
-        return $http.delete('http://localhost:1337/blog/' + id);
+        return $http.delete(API_ENDPOINT + '/blog/' + id);
       },
       post: function (data) {
-        return $http.post('http://localhost:1337/blog', data);
+        return $http.post(API_ENDPOINT + '/blog/', data);
       }
     };
   });
