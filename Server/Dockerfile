@@ -9,7 +9,6 @@ WORKDIR ${appDir}
 
 # Add our package.json and install *before* adding our application files
 ADD package.json ./
-RUN npm install
 
 # Install pm2 so we can run our application
 RUN npm install -g pm2 sails
