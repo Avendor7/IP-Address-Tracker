@@ -15,6 +15,7 @@ RUN npm install -g pm2 sails
 
 # Add application files
 ADD . /var/www/app/current
+RUN npm install
 
 #remove contents of node_modules and re-create the folder
 RUN rm -rf node_modules
@@ -29,8 +30,8 @@ RUN cp -r waterlock node_modules
 RUN cp -r waterlock-local-auth node_modules
 
 #remove old folder
-RUN rm -rf waterlock/node_modules_
-RUN rm -rf waterlock-local-auth/node_modules_
+#RUN rm -rf waterlock/node_modules_
+#RUN rm -rf waterlock-local-auth/node_modules_
 
 #npm install
 RUN npm install
