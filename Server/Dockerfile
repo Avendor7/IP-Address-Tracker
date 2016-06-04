@@ -47,7 +47,7 @@ ADD package.json ./
 RUN npm install
 
 # Install pm2 so we can run our application
-RUN npm i -g pm2
+RUN npm install -g pm2
 
 # Add application files
 ADD . /var/www/app/current

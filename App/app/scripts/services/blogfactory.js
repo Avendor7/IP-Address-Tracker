@@ -8,15 +8,15 @@
  * Factory in the appApp.
  */
 angular.module('appApp')
-  .factory('blogFactory', function ($http) {
+  .factory('blogFactory', function ($http, API_ENDPOINT) {
       return {
    
       get: function (id) {
-        return $http.get('http://localhost:1337/blog/' + id);
+        return $http.get(API_ENDPOINT+ id);
       },
 
       getAll: function () {
-        return $http.get('http://localhost:1337/blog');
+        return $http.get(API_ENDPOINT);
       },
       
       put: function (data) {
