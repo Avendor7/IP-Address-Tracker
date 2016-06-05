@@ -141,6 +141,7 @@ h1{
 
 hr {
 	border-top: 1px solid #000;
+	margin-top: 5px;
 }
 .hr-white{
 	border-top: 1px solid #FFF;
@@ -175,6 +176,11 @@ img.login-logo {
 .editor { 
 	height: 500px;
 	margin: 20px;
+}
+
+.dates{
+	
+	font-size:75%;
 }
 
 //login form
