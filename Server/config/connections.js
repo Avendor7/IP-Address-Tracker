@@ -58,7 +58,7 @@ module.exports.connections = {
   ***************************************************************************/
   MongodbServer: {
     adapter: 'sails-mongo',
-    host: 'mongodb://mongo:27017',
+    host: '172.17.0.2',
     port: 27017,
     // user: 'username',
     // password: 'password',
