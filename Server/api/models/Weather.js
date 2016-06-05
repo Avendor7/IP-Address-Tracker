@@ -7,8 +7,27 @@
 
 module.exports = {
 
-  attributes: {
-
-  }
+    schema: true,
+    autoPK: true,
+    attributes: {
+        temperature1: {
+            type: 'number'
+        },
+        temperature2: {
+            type: 'number'
+        },
+        temperature3: {
+            type: 'number'
+        },
+        temperature4: {
+            type: 'number'
+        },
+        temperature5: {
+            type: 'number'
+        },
+        temperature6: {
+            type: 'number'
+        }
+    }
 };
 
