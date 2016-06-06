@@ -10,5 +10,5 @@
 angular.module('appApp')
   //sails URL
 .constant('API_ENDPOINT', {
-  url: 'http://localhost:1337' 
+  url: 'http://159.203.32.239:1337' 
 });
