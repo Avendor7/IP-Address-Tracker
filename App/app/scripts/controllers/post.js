@@ -11,7 +11,7 @@ angular.module('appApp')
   .controller('PostCtrl', function ($scope, blogFactory, $stateParams) {
     
     var currentId = $stateParams.id;
-    
+    console.log(currentId);
     blogFactory.get(currentId)
       .success(function (response) {
         var fullPost = response;

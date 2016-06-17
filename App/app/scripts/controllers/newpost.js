@@ -8,7 +8,7 @@
  * Controller of the appApp
  */
 angular.module('appApp')
-  .controller('NewpostCtrl', function ($scope, blogFactory) {
+  .controller('NewpostCtrl', function ($scope, blogFactory, $state) {
     
     $scope.makePost = function () {
       console.log($scope.newPost);
@@ -16,6 +16,7 @@ angular.module('appApp')
       blogFactory.post($scope.newPost)
         .success(function () {
           //TODO: have factory return the id so $state can be redirected
+          $state.href("anon.post", { id:newPost.id });
           console.log('It Worked... finally');
         })
         .error(function (response, status) {

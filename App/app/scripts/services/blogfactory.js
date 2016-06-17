@@ -12,7 +12,7 @@ angular.module('appApp')
       return {
    
       get: function (id) {
-        return $http.get(API_ENDPOINT.url + id);
+        return $http.get(API_ENDPOINT.url + 'blog/' + id);
       },
 
       getAll: function () {
