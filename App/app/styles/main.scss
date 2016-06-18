@@ -5,13 +5,13 @@ $red: #ff0000;
 $black: #000;
 $color_limed_spruce_approx: #374755;
 $color_log_cabin_approx: #212121;
+$navShade: #373737;
 $alabaster: #fafafa;
 //$primary: #007796;
 $primary: #006b87;
 $danger: #961F00;
 $white_84: rgba(255, 255, 255, 0.84);
 $white: #FFF;
-$black: #000;
 $boxShadow: rgba(0, 0, 0, 0.3);
 //fonts
 $font_0: Ubuntu;
@@ -55,15 +55,15 @@ h1{
 		color: $white_84; 
 	}
 	a:hover { 
-    	background-color: $color_limed_spruce_approx;
+    	background-color: $navShade;
 	}
 	ul.nav a:hover{
 		background-color: $color_log_cabin_approx;
-		background-color: $color_limed_spruce_approx;
+		background-color: $navShade;
 	}
 	ul.nav active{
 		background-color: $color_log_cabin_approx;
-		background-color: $color_limed_spruce_approx;
+		background-color: $navShade;
 	}
 }
 
