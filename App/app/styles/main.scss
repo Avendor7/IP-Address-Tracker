@@ -49,10 +49,12 @@ h1{
 		padding-bottom: 19px;
 	}
 }
-.navbar {
+.navbar-custom {
 	background-color: $color_log_cabin_approx;
+
 	a {
-		color: $white_84; 
+		color: $white_84;
+		background-color: $color_log_cabin_approx; 
 	}
 	a:hover { 
     	background-color: $navShade;
@@ -64,6 +66,10 @@ h1{
 	ul.nav active{
 		background-color: $color_log_cabin_approx;
 		background-color: $navShade;
+	}
+	li{
+		background-color: $color_log_cabin_approx;
+		
 	}
 }
 
