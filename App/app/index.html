@@ -30,40 +30,39 @@
 
     <!-- Add your site or application content here -->
     <div class="header">
-        <nav class="navbar navbar-fixed-top navbar-custom" role="navigation">
-            <div class="container">
-                <div class="navbar-header">
-
-                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#js-navbar-collapse">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-
-                    <a class="navbar-brand" href="#/">Stephen Wiggins</a>
-                </div>
-
-                <div class="collapse navbar-collapse" id="js-navbar-collapse">
-
-                    <ul class="nav navbar-nav">
-                        <li><a ui-sref="anon.blog">Blog</a></li>
-                        <li><a ui-sref="user.ipaddress">IP Address Manager</a></li>
-                        <li><a ui-sref="anon.resume" >Resume</a></li>
-                        <li><a ui-sref="anon.post">Post</a></li>
-                        <li><a ui-sref="user.newPost">newPost</a></li>
-                        <li><a ui-sref="user.viewSnippets">viewSnippets</a></li>
-                        <li><a ui-sref="user.snippet">Snippet</a></li>
-                        <li><a ui-sref="user.newSnippet">newSnippet</a></li>
+        
+        <nav class="navbar navbar-custom">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#mainNav" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#/">Stephen Wiggins</a>
+            </div>                
+            <div class="navbar-collapse collapse" id="mainNav" aria-expanded="false" style="height: 1px;">
+                <ul class="nav navbar-nav navbar-left">
+                        <li ui-sref-active="active"><a ui-sref="anon.blog">Blog</a></li>
+                        <li ui-sref-active="active"><a ui-sref="user.ipaddress">IP Address Manager</a></li>
+                        <li ui-sref-active="active"><a ui-sref="anon.resume" >Resume</a></li>
+                        <li ui-sref-active="active"><a ui-sref="anon.post">Post</a></li>
+                        <li ui-sref-active="active"><a ui-sref="user.newPost">newPost</a></li>
+                        <li ui-sref-active="active"><a ui-sref="user.viewSnippets">viewSnippets</a></li>
+                        <li ui-sref-active="active"><a ui-sref="user.snippet">Snippet</a></li>
+                        <li ui-sref-active="active"><a ui-sref="user.newSnippet">newSnippet</a></li>
                     </ul>
                      <ul class="nav navbar-nav navbar-right">
                         <li><a ui-sref="anon.login">Login</a></li>
                         <li><a ui-sref="anon.logoff">Logoff</a></li>
                     </ul>
-                </div>
             </div>
-        </nav>
+        </div>
+    </nav>
     </div>
+    
+
 
     <div class="container">
         <div ui-view=""></div>
