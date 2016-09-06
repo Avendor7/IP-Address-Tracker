@@ -30,7 +30,7 @@ angular.module('appApp')
             }
           });
     }
-    
+  
     //start load by grabbing all of the ip addresses from the DB
     getAllData();
     

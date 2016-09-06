@@ -11,13 +11,12 @@ angular.module('appApp')
   .controller('NewpostCtrl', function ($scope, blogFactory, $state) {
     
     $scope.makePost = function () {
-      console.log($scope.newPost);
+      
       //write put request to database factory
       blogFactory.post($scope.newPost)
         .success(function () {
           //TODO: have factory return the id so $state can be redirected
           $state.href("anon.post", { id:newPost.id });
-          console.log('It Worked... finally');
         })
         .error(function (response, status) {
           switch (status) {
