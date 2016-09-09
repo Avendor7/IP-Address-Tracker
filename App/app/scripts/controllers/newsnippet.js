@@ -16,7 +16,6 @@ angular.module('appApp')
       snippetFactory.post($scope.newSnippet)
         .success(function () {
           //TODO: have factory return the id so $state can be redirected
-          console.log('It Worked... finally');
         })
         .error(function (response, status) {
           switch (status) {

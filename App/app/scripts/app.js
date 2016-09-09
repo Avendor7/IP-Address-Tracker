@@ -41,13 +41,13 @@ angular
                 templateUrl: 'views/blog.html',
                 controller: 'BlogCtrl',
                 controllerAs: 'blog',
-                url: '/'
+                url: '/blog'
             })
             .state('anon.resume', {
                 templateUrl: 'views/resume.html',
                 controller: 'ResumeCtrl',
                 controllerAs: 'resume',
-                url: '/resume'
+                url: '/'
             })
             .state('anon.post', {
                 templateUrl: 'views/post.html',
